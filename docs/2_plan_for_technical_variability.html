@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Plan for technical variability – How to run online behavioral experiments</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./3_plan_for_behavioral_variability.html" rel="next">
+<link href="./1_maximize_the_advantages.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S4B0H96CC5"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+ 
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  });
+gtag('config', 'G-S4B0H96CC5', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="2&nbsp; Plan for technical variability – How to run online behavioral experiments">
+<meta property="og:description" content="">
+<meta property="og:image" content="Figures/TechnicalVariability.png">
+<meta property="og:site_name" content="How to run online behavioral experiments">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./designing.html">Planning the experiment</a></li><li class="breadcrumb-item"><a href="./2_plan_for_technical_variability.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Plan for technical variability</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">How to run online behavioral experiments</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./designing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Planning the experiment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_maximize_the_advantages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximize the advantages of online crowdsourcing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_plan_for_technical_variability.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Plan for technical variability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3_plan_for_behavioral_variability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Plan for behavioral variability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4_validate_your_experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Validate your experiment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4.1_good_experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interim summary: What constitutes a “good” online experiment?</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./running.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running the experiment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./5_recruit_participants_strategically.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Recruit participants strategically</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./6_instruct_clearly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Instruct clearly</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./7_make_it_engaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Make it engaging</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./8_collect_data_comprehensively.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Collect data comprehensively</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./9_respect_your_participants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Respect your participants</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">After the experiment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_make_it_discoverable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make it discoverable</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_closing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outroduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#combat-technical-variability-through-experiment-design" id="toc-combat-technical-variability-through-experiment-design" class="nav-link active" data-scroll-target="#combat-technical-variability-through-experiment-design"><span class="header-section-number">2.1</span> Combat technical variability through experiment design</a></li>
+  <li><a href="#standardize-hardware-and-software" id="toc-standardize-hardware-and-software" class="nav-link" data-scroll-target="#standardize-hardware-and-software"><span class="header-section-number">2.2</span> Standardize hardware and software</a></li>
+  <li><a href="#standardize-the-experiment" id="toc-standardize-the-experiment" class="nav-link" data-scroll-target="#standardize-the-experiment"><span class="header-section-number">2.3</span> Standardize the experiment</a></li>
+  <li><a href="#record-technical-factors" id="toc-record-technical-factors" class="nav-link" data-scroll-target="#record-technical-factors"><span class="header-section-number">2.4</span> Record technical factors</a></li>
+  <li><a href="#pilot-the-experiment-on-a-range-of-devices" id="toc-pilot-the-experiment-on-a-range-of-devices" class="nav-link" data-scroll-target="#pilot-the-experiment-on-a-range-of-devices"><span class="header-section-number">2.5</span> Pilot the experiment on a range of devices</a></li>
+  <li><a href="#the-principle-in-action" id="toc-the-principle-in-action" class="nav-link" data-scroll-target="#the-principle-in-action"><span class="header-section-number">2.6</span> The principle in action</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./designing.html">Planning the experiment</a></li><li class="breadcrumb-item"><a href="./2_plan_for_technical_variability.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Plan for technical variability</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-princ-two" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Plan for technical variability</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A primary concern with online crowdsourcing is the variability participants’ hardware and software. Computers may differ in screen size and resolution, and input devices can range from mice to trackballs to trackpads, each with different characteristics. Although these factors may appear trivial, they can sometimes compromise the ability to address key research questions <span class="citation" data-cites="germineDigitalNeuropsychologyChallenges2019">(<a href="references.html#ref-germineDigitalNeuropsychologyChallenges2019" role="doc-biblioref">Germine, Reinecke, and Chaytor 2019</a>)</span>. Below, we outline strategies to account for variability in software and hardware through experimental design and data analysis.</p>
+<section id="combat-technical-variability-through-experiment-design" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="combat-technical-variability-through-experiment-design"><span class="header-section-number">2.1</span> Combat technical variability through experiment design</h2>
+<p>Modern computing systems exhibit variability both within a single setup and across different setups. Within a given setup, response times measured via key presses can vary by roughly 30 ms (SDstandard deviation). Across setups, differences in operating systems and browsers can shift mean response times by as much as 80 ms <span class="citation" data-cites="anwyl-irvineRealisticPrecisionAccuracy2021 bridgesTimingMegastudyComparing2020">(<a href="references.html#ref-anwyl-irvineRealisticPrecisionAccuracy2021" role="doc-biblioref">Anwyl-Irvine et al. 2021</a>; <a href="references.html#ref-bridgesTimingMegastudyComparing2020" role="doc-biblioref">Bridges et al. 2020</a>)</span>. Hardware differences can further exacerbate behavioral variability, with reaction times differing by 70 ms across different touchscreen devices <span class="citation" data-cites="schatzValidatingAccuracyReaction2015">(<a href="references.html#ref-schatzValidatingAccuracyReaction2015" role="doc-biblioref">Schatz, Ybarra, and Leitner 2015</a>)</span> and by 130 ms between mouse and trackpad inputs <span class="citation" data-cites="warburtonInputDeviceMatters2025 watralComparingMouseTrackpad2023">(<a href="references.html#ref-warburtonInputDeviceMatters2025" role="doc-biblioref">Warburton et al. 2025a</a>; <a href="references.html#ref-watralComparingMouseTrackpad2023" role="doc-biblioref">Watral et al. 2023</a>)</span>.</p>
+<p>To mitigate technical variability, we recommend the use of within-subject experimental designs where possible. This approach effectively controls for both within- and between-setup variability, since setup-specific noise would evenly impact all conditions.</p>
+<p>However, when within-subject designs are infeasible and between-subject designs are required, it becomes especially important to understand the two keys ways in which technical variability can undermine data quality: first, technological variability adds variability around group means and thus reduces statistical power to detect effects of interest (<a href="#fig-technical-variability" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>a); and second, if random participant assignment fails to balance technical variables across conditions, between-subject designs can lead to spurious effects (<a href="#fig-technical-variability" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>b).</p>
+<p>Both risks above are especially problematic when technical variability approaches or exceeds natural behavioral variability – for example, adding 35 ms of technical variability to 70 ms of behavioral variability raises a group’s standard deviation to just 78 ms, a negligible effect on group comparisons. In contrast, adding technical variability (70 ms) equal to behavioral variability (70 ms) raises a group’s standard deviation to 99 ms, a distortion that can obscure group differences. Nonetheless, larger sample sizes can help offset these risks, and a priori power analyses can clarify how technical noise affects the inferences drawn (see <a href="#sec-box-one">Box 1</a>).</p>
+<p>Studies of individual differences are especially vulnerable to technical variability. For example, if a demographic factor of interest (e.g., sex/gender) is associated with the hardware participants use (e.g., men more often use trackpads; women more often use mice), and these devices differ in response time properties, analyses that ignore this mediating pathway may falsely attribute response-time differences to sex/gender, despite no direct causal link (<a href="#fig-technical-variability" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>c). In principle, one could measure and control for many such variables, but in practice it is difficult to know whether unmeasured factors remain that could undermine the study, making it crucial for researchers to evaluate how seriously potential confounds could threaten their study.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-technical-variability" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-technical-variability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/TechnicalVariability.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-technical-variability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Technical variability can introduce variability or bias to the data. (a) When substantial technical variability is added to behavioral variability, statistical power to detect true effects is reduced. (b) If random assignment fails to balance extraneous variables (e.g., input device) between groups (e.g., sex/gender), there can be spurious group differences in the dependent variable (e.g., response time) even in the absence of a true difference. (c) If sex/gender correlates with input device, and that device itself correlates with response time, a spurious correlation between sex/gender and response time may emerge.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Box 1: Accounting for variability through power analyses
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To demonstrate how technical variability can be accounted for when conducting power analyses, we modeled an experiment where we expect to observe a 40ms difference in reaction time between two groups, each with a behavioral standard deviation in reaction time of 80ms across participants (similar to estimates for simple reaction times; <span class="citation" data-cites="dearyReactionTimeAge2005">Deary and Der (<a href="references.html#ref-dearyReactionTimeAge2005" role="doc-biblioref">2005</a>)</span>), equivalent to a Cohen’s d of 0.5. However, our ability to measure this true effect is hampered by technical variability between setups.</p>
+<p>The simplest way to assess the impact of technical variability is to use a power calculator, such as G*Power <span class="citation" data-cites="faulGPower3Flexible2007">(<a href="references.html#ref-faulGPower3Flexible2007" role="doc-biblioref">Faul et al. 2007</a>)</span>, and enter an inflated estimate of each group’s standard deviation. Under parametric assumptions, the sample standard deviation can be calculated as <span class="math inline">\(\sigma_s = \sqrt{\sigma_b + \sigma_t}\)</span>, where <span class="math inline">\(\sigma_b\)</span> and <span class="math inline">\(\sigma_t\)</span> are behavioral and technical standard deviations respectively. With this, we could find the sample size required to reach a desired statistical power, here 80%, across different levels of technical variability (<a href="#fig-box-one" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>a).</p>
+<p>An alternative, but more comprehensive approach, would be to observe how power changes as the sample size and potential technical variability are both varied, shown in <a href="#fig-box-one" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>b (we provide R scripts in the materials). This framework can be extended to incorporate additional factors, for example, jointly modeling power as a function of both the number of participants and the number of trials per participant (<a href="#fig-box-one" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>c; see <span class="citation" data-cites="bakerPowerContoursOptimising2021">Baker et al. (<a href="references.html#ref-bakerPowerContoursOptimising2021" role="doc-biblioref">2021</a>)</span> for more information). The advantage of this approach is that it enables an estimation of the ‘wiggle room’ around a selected level of power, should factors like participant numbers drop due to exclusions. Together, these power analyses clarify the impact of technical variability and help inform the overall experimental design.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-box-one" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-box-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/Box1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-box-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Power analysis helps anticipate the effects of technical variability. (a) The sample size required to achieve 80% power increases as technical variability rises. (b) Power “contours” illustrate the safety margin available at different levels of technical variability. (c) These contours also indicate how large a sample and how many trials per participant are needed to achieve the desired statistical power.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="standardize-hardware-and-software" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="standardize-hardware-and-software"><span class="header-section-number">2.2</span> Standardize hardware and software</h2>
+<p>Standardizing software and hardware across participants is one of the most effective ways to reduce technical variability. Whenever possible, we recommend researchers restrict participants to those using specific device types (i.e., either computers, tablets, or phones), a feature supported by crowdsourcing platforms such as Prolific, because measures such as simple response times can vary substantially across these device types <span class="citation" data-cites="passellCognitiveTestScores2021">(<a href="references.html#ref-passellCognitiveTestScores2021" role="doc-biblioref">Passell et al. 2021</a>)</span>. Researchers can also implement code or questionnaires to further restrict participation based on operating system, browser type, input device, and screen refresh rates. However, the benefits of greater experimental control must be weighed against the risk of homogenizing the sample. For example, findings may fail to generalize if a study inadvertently limits their population to tech-savvy participants or those using high-performance devices <span class="citation" data-cites="germineDigitalNeuropsychologyChallenges2019">(<a href="references.html#ref-germineDigitalNeuropsychologyChallenges2019" role="doc-biblioref">Germine, Reinecke, and Chaytor 2019</a>)</span>.</p>
+</section>
+<section id="standardize-the-experiment" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="standardize-the-experiment"><span class="header-section-number">2.3</span> Standardize the experiment</h2>
+<p>Standardizing experimental stimuli is a powerful way to further reduce unwanted variability. For example, psychophysics studies often require precise control over stimulus size in terms of visual angle, which depends on both the physical size of the stimulus and the participant’s viewing distance. Similarly, motor control studies may need to measure the actual movement distance on a participant’s trackpad.</p>
+<p>To standardize stimuli across participants, researchers can implement calibration procedures that exploit an element of universality. For example, the ubiquity and standard size of credit cards enables easily mapping virtual units onto real-world measurements, allowing estimation of on-screen stimulus size <span class="citation" data-cites="liControllingParticipantsViewing2020 yungMethodsTestVisual2015">(<a href="references.html#ref-liControllingParticipantsViewing2020" role="doc-biblioref">Li et al. 2020</a>; <a href="references.html#ref-yungMethodsTestVisual2015" role="doc-biblioref">Yung et al. 2015</a>)</span> and trackpad movement distance <span class="citation" data-cites="coltmanSensitivityErrorVisuomotor2021">(<a href="references.html#ref-coltmanSensitivityErrorVisuomotor2021" role="doc-biblioref">Coltman et al. 2021</a>)</span>. Similarly, the relatively fixed position of the human eye’s blind spot can be used to standardize viewing distances <span class="citation" data-cites="liControllingParticipantsViewing2020">(<a href="references.html#ref-liControllingParticipantsViewing2020" role="doc-biblioref">Li et al. 2020</a>)</span>, and audio calibration procedures can adjust volume to each participant’s setup and hearing ability <span class="citation" data-cites="zhaoRobustEfficientOnline2022">(<a href="references.html#ref-zhaoRobustEfficientOnline2022" role="doc-biblioref">Zhao et al. 2022</a>)</span>.</p>
+<p>However, standardizing experimental stimuli comes with trade-offs. First, calibration procedures can be tedious and frustrating. Moreover, some may be unwilling or unable to use tools like a credit card for calibration (though clear instructions can help mitigate this; <a href="6_instruct_clearly.html">§ Instruct clearly</a>). Second, device differences limit how much standardization is possible (for instance, stimuli must be sized to remain visible even on the smallest screens), often forcing researchers to impose additional hardware requirements. Third, even with calibration, variability inevitably persists (even in lab studies), so researchers must weigh the benefits of calibration against participant burden and assess how the remaining variability could affect their research question.</p>
+</section>
+<section id="record-technical-factors" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="record-technical-factors"><span class="header-section-number">2.4</span> Record technical factors</h2>
+<p>For technical variables that cannot be controlled, we recommend recording them and accounting for them analytically, for example by including them as covariates in statistical models (more on this in <a href="8_collect_data_comprehensively.html">§ Collect data comprehensively</a>). For example, although screen refresh rate cannot be controlled and directly determines temporal resolution, it can be measured and modeled during analysis to assess whether it mediates the behavior of interest.</p>
+</section>
+<section id="pilot-the-experiment-on-a-range-of-devices" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="pilot-the-experiment-on-a-range-of-devices"><span class="header-section-number">2.5</span> Pilot the experiment on a range of devices</h2>
+<p>We recommend piloting studies across the full range of devices participants might use. Are stimuli legible on small screens? Are experiments easily completed using a trackpad or mouse? Systematically testing diverse setups in advance helps detect and prevent systematic errors before launching the experiment.</p>
+</section>
+<section id="the-principle-in-action" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="the-principle-in-action"><span class="header-section-number">2.6</span> The principle in action</h2>
+<p>We present an example illustrating how input devices can contaminate online studies of individual differences (<a href="#fig-principle-two" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>a). When considering the effect of sex/gender on reaction times, males appear to be 53 ms quicker to initiate a goal-directed movement than females <span class="citation" data-cites="warburtonInputDeviceMatters2025">(<a href="references.html#ref-warburtonInputDeviceMatters2025" role="doc-biblioref">Warburton et al. 2025a</a>)</span>. However, after including input device (mouse vs trackpad) as a covariate, the sex/gender gap shrinks to 6 ms and is no longer statistically significant. Thus, the apparent sex/gender effect reflects systematic latency differences between devices combined with biased device usage: female participants were more likely to use slower trackpads, whereas male participants more often used faster mice <span class="citation" data-cites="zhangLargeReachingDatasets2026">(also see <a href="references.html#ref-zhangLargeReachingDatasets2026" role="doc-biblioref">Zhang et al. 2026</a>)</span>.</p>
+<p>This technological confound extends beyond response times to many behavioral measures. For example, reach velocity profiles differ between devices (<a href="#fig-principle-two" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>b), posing a concern for mouse-tracking studies that infer latent cognitive processes from these trajectories <span class="citation" data-cites="dotanTrackItCrack2019">(<a href="references.html#ref-dotanTrackItCrack2019" role="doc-biblioref">Dotan et al. 2019</a>)</span>. However, device effects do not penetrate behaviors universally: in visuomotor adaptation, the rate and extent of adaptation are comparable between trackpad and mouse users (<a href="#fig-principle-two" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>c; <span class="citation" data-cites="kimMotorLearningMovement2022">Kim, Forrence, and McDougle (<a href="references.html#ref-kimMotorLearningMovement2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="tsayMovingOutsideLab2021">Tsay et al. (<a href="references.html#ref-tsayMovingOutsideLab2021" role="doc-biblioref">2021</a>)</span>; <span class="citation" data-cites="tsayLargescaleCitizenScience2024">Tsay et al. (<a href="references.html#ref-tsayLargescaleCitizenScience2024" role="doc-biblioref">2024</a>)</span>; <span class="citation" data-cites="warburtonVisuomotorMemoryNot2025">Warburton et al. (<a href="references.html#ref-warburtonVisuomotorMemoryNot2025" role="doc-biblioref">2025b</a>)</span>). This contrast underscores the need to identify when technological variability is likely to influence outcomes.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-principle-two" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-principle-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/Rule2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-principle-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Technical variability can have different effects across behaviors. (a) When modeling the effect of sex/gender alone on reaction time, a significant effect is observed where males show faster reaction times than females (left). However, this apparent sex/gender effect disappears once input device is included as a covariate (right). The intercept reflects reaction times for females pooled across devices when device is not controlled (left), and for females specifically using a mouse when device is controlled (right). (b) Other variables, such as movement time, target-click latency, and overall cursor speed (shown) also differ between devices. (c) In contrast, the rate and extent of visuomotor adaptation in response to a 30° rotation does not differ between devices. Data in (a &amp; b) from <span class="citation" data-cites="warburtonInputDeviceMatters2025">Warburton et al. (<a href="references.html#ref-warburtonInputDeviceMatters2025" role="doc-biblioref">2025a</a>)</span>, and in (c) from <span class="citation" data-cites="warburtonVisuomotorMemoryNot2025">Warburton et al. (<a href="references.html#ref-warburtonVisuomotorMemoryNot2025" role="doc-biblioref">2025b</a>)</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-anwyl-irvineRealisticPrecisionAccuracy2021" class="csl-entry" role="listitem">
+Anwyl-Irvine, Alexander L., Edwin S. Dalmaijer, Nick Hodges, and Jo K. Evershed. 2021. <span>“Realistic Precision and Accuracy of Online Experiment Platforms, Web Browsers, and Devices.”</span> <em>Behavior Research Methods</em> 53 (4): 1407–25. <a href="https://doi.org/10.3758/s13428-020-01501-5">https://doi.org/10.3758/s13428-020-01501-5</a>.
+</div>
+<div id="ref-bakerPowerContoursOptimising2021" class="csl-entry" role="listitem">
+Baker, Daniel H., Greta Vilidaite, Freya A. Lygo, Anika K. Smith, Tessa R. Flack, André D. Gouws, and Timothy J. Andrews. 2021. <span>“Power Contours: <span>Optimising</span> Sample Size and Precision in Experimental Psychology and Human Neuroscience.”</span> <em>Psychological Methods</em> 26 (3): 295–314. <a href="https://doi.org/10.1037/met0000337">https://doi.org/10.1037/met0000337</a>.
+</div>
+<div id="ref-bridgesTimingMegastudyComparing2020" class="csl-entry" role="listitem">
+Bridges, David, Alain Pitiot, Michael R. MacAskill, and Jonathan W. Peirce. 2020. <span>“The Timing Mega-Study: Comparing a Range of Experiment Generators, Both Lab-Based and Online.”</span> <em>PeerJ</em> 8 (July): e9414. <a href="https://doi.org/10.7717/peerj.9414">https://doi.org/10.7717/peerj.9414</a>.
+</div>
+<div id="ref-coltmanSensitivityErrorVisuomotor2021" class="csl-entry" role="listitem">
+Coltman, Susan K., Robert J. van Beers, W. Pieter Medendorp, and Paul L. Gribble. 2021. <span>“Sensitivity to Error During Visuomotor Adaptation Is Similarly Modulated by Abrupt, Gradual, and Random Perturbation Schedules.”</span> <em>Journal of Neurophysiology</em> 126 (3): 934–45. <a href="https://doi.org/10.1152/jn.00269.2021">https://doi.org/10.1152/jn.00269.2021</a>.
+</div>
+<div id="ref-dearyReactionTimeAge2005" class="csl-entry" role="listitem">
+Deary, Ian J., and Geoff Der. 2005. <span>“Reaction <span>Time</span>, <span>Age</span>, and <span>Cognitive Ability</span>: <span>Longitudinal Findings</span> from <span>Age</span> 16 to 63 <span>Years</span> in <span>Representative Population Samples</span>.”</span> <em>Aging, Neuropsychology, and Cognition</em> 12 (2): 187–215. <a href="https://doi.org/10.1080/13825580590969235">https://doi.org/10.1080/13825580590969235</a>.
+</div>
+<div id="ref-dotanTrackItCrack2019" class="csl-entry" role="listitem">
+Dotan, Dror, Pedro Pinheiro-Chagas, Fosca Al Roumi, and Stanislas Dehaene. 2019. <span>“Track <span>It</span> to <span>Crack It</span>: <span>Dissecting Processing Stages</span> with <span>Finger Tracking</span>.”</span> <em>Trends in Cognitive Sciences</em> 23 (12): 1058–70. <a href="https://doi.org/10.1016/j.tics.2019.10.002">https://doi.org/10.1016/j.tics.2019.10.002</a>.
+</div>
+<div id="ref-faulGPower3Flexible2007" class="csl-entry" role="listitem">
+Faul, Franz, Edgar Erdfelder, Albert-Georg Lang, and Axel Buchner. 2007. <span>“G*<span>Power</span> 3: <span>A</span> Flexible Statistical Power Analysis Program for the Social, Behavioral, and Biomedical Sciences.”</span> <em>Behavior Research Methods</em> 39 (2): 175–91. <a href="https://doi.org/10.3758/BF03193146">https://doi.org/10.3758/BF03193146</a>.
+</div>
+<div id="ref-germineDigitalNeuropsychologyChallenges2019" class="csl-entry" role="listitem">
+Germine, Laura, Katharina Reinecke, and Naomi S. Chaytor. 2019. <span>“Digital Neuropsychology: <span>Challenges</span> and Opportunities at the Intersection of Science and Software.”</span> <em>The Clinical Neuropsychologist</em> 33 (2): 271–86. <a href="https://doi.org/10.1080/13854046.2018.1535662">https://doi.org/10.1080/13854046.2018.1535662</a>.
+</div>
+<div id="ref-kimMotorLearningMovement2022" class="csl-entry" role="listitem">
+Kim, Olivia A., Alexander D. Forrence, and Samuel D. McDougle. 2022. <span>“Motor Learning Without Movement.”</span> <em>Proceedings of the National Academy of Sciences</em> 119 (30): e2204379119. <a href="https://doi.org/10.1073/pnas.2204379119">https://doi.org/10.1073/pnas.2204379119</a>.
+</div>
+<div id="ref-liControllingParticipantsViewing2020" class="csl-entry" role="listitem">
+Li, Qisheng, Sung Jun Joo, Jason D. Yeatman, and Katharina Reinecke. 2020. <span>“Controlling for <span>Participants</span>’ <span>Viewing Distance</span> in <span>Large-Scale</span>, <span>Psychophysical Online Experiments Using</span> a <span>Virtual Chinrest</span>.”</span> <em>Scientific Reports</em> 10 (1): 904. <a href="https://doi.org/10.1038/s41598-019-57204-1">https://doi.org/10.1038/s41598-019-57204-1</a>.
+</div>
+<div id="ref-passellCognitiveTestScores2021" class="csl-entry" role="listitem">
+Passell, Eliza, Roger W. Strong, Lauren A. Rutter, Heesu Kim, Luke Scheuer, Paolo Martini, Liz Grinspoon, and Laura Germine. 2021. <span>“Cognitive Test Scores Vary with Choice of Personal Digital Device.”</span> <em>Behavior Research Methods</em> 53 (6): 2544–57. <a href="https://doi.org/10.3758/s13428-021-01597-3">https://doi.org/10.3758/s13428-021-01597-3</a>.
+</div>
+<div id="ref-schatzValidatingAccuracyReaction2015" class="csl-entry" role="listitem">
+Schatz, Philip, Vincent Ybarra, and Donald Leitner. 2015. <span>“Validating the <span>Accuracy</span> of <span>Reaction Time Assessment</span> on <span>Computer-Based Tablet Devices</span>.”</span> <em>Assessment</em> 22 (4): 405–10. <a href="https://doi.org/10.1177/1073191114566622">https://doi.org/10.1177/1073191114566622</a>.
+</div>
+<div id="ref-tsayLargescaleCitizenScience2024" class="csl-entry" role="listitem">
+Tsay, Jonathan S., Hrach Asmerian, Laura T. Germine, Jeremy Wilmer, Richard B. Ivry, and Ken Nakayama. 2024. <span>“Large-Scale Citizen Science Reveals Predictors of Sensorimotor Adaptation.”</span> <em>Nature Human Behaviour</em>, January. <a href="https://doi.org/10.1038/s41562-023-01798-0">https://doi.org/10.1038/s41562-023-01798-0</a>.
+</div>
+<div id="ref-tsayMovingOutsideLab2021" class="csl-entry" role="listitem">
+Tsay, Jonathan S., Richard B Ivry, Alan Lee, and Guy Avraham. 2021. <span>“Moving Outside the Lab: <span>The</span> Viability of Conducting Sensorimotor Learning Studies Online.”</span> <em>Neurons, Behavior, Data Analysis, and Theory</em>, 1–22. <a href="https://doi.org/10.51628/001c.26985">https://doi.org/10.51628/001c.26985</a>.
+</div>
+<div id="ref-warburtonInputDeviceMatters2025" class="csl-entry" role="listitem">
+Warburton, Matthew, Carlo Campagnoli, Mark Mon-Williams, Faisal Mushtaq, and J. Ryan Morehead. 2025a. <span>“Input Device Matters for Measures of Behaviour in Online Experiments.”</span> <em>Psychological Research</em> 89 (29): 1–15. <a href="https://doi.org/10.1007/s00426-024-02065-1">https://doi.org/10.1007/s00426-024-02065-1</a>.
+</div>
+<div id="ref-warburtonVisuomotorMemoryNot2025" class="csl-entry" role="listitem">
+———. 2025b. <span>“Visuomotor Memory Is Not Bound to Visual Motion.”</span> <em>Journal of Neuroscience</em> 45 (17): e1884242025. <a href="https://doi.org/10.1523/JNEUROSCI.1884-24.2025">https://doi.org/10.1523/JNEUROSCI.1884-24.2025</a>.
+</div>
+<div id="ref-watralComparingMouseTrackpad2023" class="csl-entry" role="listitem">
+Watral, Alexandra T., Abby Morley, Robert Pastel, and Kevin M. Trewartha. 2023. <span>“Comparing Mouse Versus Trackpad Input in a Web-Based App for Assessing Motor Learning.”</span> <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> 67 (1): 2113–19. <a href="https://doi.org/10.1177/21695067231192911">https://doi.org/10.1177/21695067231192911</a>.
+</div>
+<div id="ref-yungMethodsTestVisual2015" class="csl-entry" role="listitem">
+Yung, Amanda, Pedro Cardoso-Leite, Gillian Dale, Daphne Bavelier, and C. Shawn Green. 2015. <span>“Methods to <span>Test Visual Attention Online</span>.”</span> <em>Journal of Visualized Experiments</em>, no. 96 (February): 52470. <a href="https://doi.org/10.3791/52470">https://doi.org/10.3791/52470</a>.
+</div>
+<div id="ref-zhangLargeReachingDatasets2026" class="csl-entry" role="listitem">
+Zhang, Aoran, Marit F L Ruitenberg, Matthew Warburton, Stephen Scott, and Jonathan S. Tsay. 2026. <span>“Large <span>Reaching Datasets Quantify</span> the <span>Impact</span> of <span>Age</span>, <span>Sex</span>/<span>Gender</span>, and <span>Experience</span> on <span>Motor Control</span>.”</span> <em>Communications Psychology</em> 4 (16): 1–11. <a href="https://doi.org/10.1038/s44271-025-00383-7">https://doi.org/10.1038/s44271-025-00383-7</a>.
+</div>
+<div id="ref-zhaoRobustEfficientOnline2022" class="csl-entry" role="listitem">
+Zhao, Sijia, Christopher A. Brown, Lori L. Holt, and Frederic Dick. 2022. <span>“Robust and <span>Efficient Online Auditory Psychophysics</span>.”</span> <em>Trends in Hearing</em> 26 (January): 23312165221118792. <a href="https://doi.org/10.1177/23312165221118792">https://doi.org/10.1177/23312165221118792</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./1_maximize_the_advantages.html" class="pagination-link" aria-label="Maximize the advantages of online crowdsourcing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximize the advantages of online crowdsourcing</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./3_plan_for_behavioral_variability.html" class="pagination-link" aria-label="Plan for behavioral variability">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Plan for behavioral variability</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

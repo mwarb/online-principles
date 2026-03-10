@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Maximize the advantages of online crowdsourcing – How to run online behavioral experiments</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./2_plan_for_technical_variability.html" rel="next">
+<link href="./designing.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S4B0H96CC5"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+ 
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  });
+gtag('config', 'G-S4B0H96CC5', { 'anonymize_ip': true});
+</script>
+
+
+<meta property="og:title" content="1&nbsp; Maximize the advantages of online crowdsourcing – How to run online behavioral experiments">
+<meta property="og:description" content="">
+<meta property="og:image" content="Figures/Rule1.png">
+<meta property="og:site_name" content="How to run online behavioral experiments">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./designing.html">Planning the experiment</a></li><li class="breadcrumb-item"><a href="./1_maximize_the_advantages.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximize the advantages of online crowdsourcing</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">How to run online behavioral experiments</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./designing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Planning the experiment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_maximize_the_advantages.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximize the advantages of online crowdsourcing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_plan_for_technical_variability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Plan for technical variability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3_plan_for_behavioral_variability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Plan for behavioral variability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4_validate_your_experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Validate your experiment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4.1_good_experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interim summary: What constitutes a “good” online experiment?</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./running.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running the experiment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./5_recruit_participants_strategically.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Recruit participants strategically</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./6_instruct_clearly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Instruct clearly</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./7_make_it_engaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Make it engaging</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./8_collect_data_comprehensively.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Collect data comprehensively</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./9_respect_your_participants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Respect your participants</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">After the experiment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_make_it_discoverable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make it discoverable</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_closing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outroduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#advantage-1-designs-with-many-participants" id="toc-advantage-1-designs-with-many-participants" class="nav-link active" data-scroll-target="#advantage-1-designs-with-many-participants"><span class="header-section-number">1.1</span> Advantage 1: Designs with many participants</a></li>
+  <li><a href="#advantage-2-designs-with-many-timepoints" id="toc-advantage-2-designs-with-many-timepoints" class="nav-link" data-scroll-target="#advantage-2-designs-with-many-timepoints"><span class="header-section-number">1.2</span> Advantage 2: Designs with many timepoints</a></li>
+  <li><a href="#advantage-3-designs-with-specific-populations" id="toc-advantage-3-designs-with-specific-populations" class="nav-link" data-scroll-target="#advantage-3-designs-with-specific-populations"><span class="header-section-number">1.3</span> Advantage 3: Designs with specific populations</a></li>
+  <li><a href="#the-principle-in-action" id="toc-the-principle-in-action" class="nav-link" data-scroll-target="#the-principle-in-action"><span class="header-section-number">1.4</span> The principle in action</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./designing.html">Planning the experiment</a></li><li class="breadcrumb-item"><a href="./1_maximize_the_advantages.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximize the advantages of online crowdsourcing</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-princ-one" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximize the advantages of online crowdsourcing</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The convenience of online testing offers many advantages for both researchers and participants. It not only accelerates data collection but also enables experiments to be run concurrently at a scale rarely achievable in the lab. Moreover, online platforms make it possible to recruit populations that are less easily accessible in traditional lab-based research.</p>
+<section id="advantage-1-designs-with-many-participants" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="advantage-1-designs-with-many-participants"><span class="header-section-number">1.1</span> Advantage 1: Designs with many participants</h2>
+<p>Ready access to crowdsourced samples that can be tested in parallel can enable experiments to be conducted on an unprecedented scale <span class="citation" data-cites="reipsWebBasedResearchPsychology2021">(<a href="references.html#ref-reipsWebBasedResearchPsychology2021" role="doc-biblioref">Reips 2021</a>)</span>. Such large-scale studies offer many unique opportunities: they provide robust evidence for small effects <span class="citation" data-cites="tsayLargescaleCitizenScience2024">(<a href="references.html#ref-tsayLargescaleCitizenScience2024" role="doc-biblioref">Tsay, Asmerian, et al. 2024</a>)</span>; allow multiple moderating variables to be tested concurrently <span class="citation" data-cites="coutrotGlobalDeterminantsNavigation2018">(<a href="references.html#ref-coutrotGlobalDeterminantsNavigation2018" role="doc-biblioref">Coutrot et al. 2018</a>)</span>; and enable researchers to assess how broadly effects generalize across diverse groups <span class="citation" data-cites="liuLanguageExperiencePredicts2023">(<a href="references.html#ref-liuLanguageExperiencePredicts2023" role="doc-biblioref">Liu et al. 2023</a>)</span>.</p>
+<p>Concurrent participation introduces a powerful invariance to study design: recruiting 200 participants to each complete 20 conditions requires no more effort than recruiting 20 participants to complete 200 conditions each. This “many-participants few-trials” design, impractical in the lab, enables researchers to test generalizability across massive stimulus sets, such as evaluating a host of decision-making models on 10,000 risky gambles <span class="citation" data-cites="petersonUsingLargescaleExperiments2021">(<a href="references.html#ref-petersonUsingLargescaleExperiments2021" role="doc-biblioref">Peterson et al. 2021</a>)</span> or assessing typing ability across 1,500 sentences <span class="citation" data-cites="dhakalObservationsTyping1362018">(<a href="references.html#ref-dhakalObservationsTyping1362018" role="doc-biblioref">Dhakal et al. 2018</a>)</span>. Similar designs have also transformed robotics research: for example, the ROBOTURK platform crowdsourced over 2,200 high-quality teleoperated demonstrations in just 22 hours, generating more than 100 hours of data for optimizing surgical procedures <span class="citation" data-cites="mandlekarRoboTurkCrowdsourcingPlatform2018">(<a href="references.html#ref-mandlekarRoboTurkCrowdsourcingPlatform2018" role="doc-biblioref">Mandlekar et al. 2018</a>)</span>.</p>
+</section>
+<section id="advantage-2-designs-with-many-timepoints" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="advantage-2-designs-with-many-timepoints"><span class="header-section-number">1.2</span> Advantage 2: Designs with many timepoints</h2>
+<p>Online crowdsourcing is particularly well-suited for longitudinal studies. Large cohorts can be readily recruited for multi-session participation, and retention rates often rival, or even surpass, those of traditional studies lasting months or years <span class="citation" data-cites="kotheRetentionParticipantsRecruited2019">(<a href="references.html#ref-kotheRetentionParticipantsRecruited2019" role="doc-biblioref">Kothe and Ling 2019</a>)</span>. For example, a recent study tracked first-person shooter performance across 100 days of practice <span class="citation" data-cites="listmanLongTermMotorLearning2021">(<a href="references.html#ref-listmanLongTermMotorLearning2021" role="doc-biblioref">Listman et al. 2021</a>)</span>, far exceeding the typical 5-day span of in-lab skill learning studies <span class="citation" data-cites="shmuelofHowMotorSkill2012">(e.g., <a href="references.html#ref-shmuelofHowMotorSkill2012" role="doc-biblioref">Shmuelof, Krakauer, and Mazzoni 2012</a>)</span>.</p>
+</section>
+<section id="advantage-3-designs-with-specific-populations" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="advantage-3-designs-with-specific-populations"><span class="header-section-number">1.3</span> Advantage 3: Designs with specific populations</h2>
+<p>Online recruitment makes it possible to access specific, hard to reach demographics that are often difficult to recruit, or even unattainable, through traditional in-lab methods <span class="citation" data-cites="smithConvenientSolutionUsing2015">(<a href="references.html#ref-smithConvenientSolutionUsing2015" role="doc-biblioref">Smith et al. 2015</a>)</span>. Many participant pools and citizen science approaches enable selective recruitment by demographics, making it straightforward to target specific populations, for example, video game players <span class="citation" data-cites="hydeFirstPersonShooterExpertise2025">(<a href="references.html#ref-hydeFirstPersonShooterExpertise2025" role="doc-biblioref">Hyde et al. 2025</a>)</span>, left-handed individuals, or individuals reporting neuropsychiatric symptoms <span class="citation" data-cites="atkinsonAbilityDirectAttention2025 barackAttentionDeficitsLinked2024">(<a href="references.html#ref-atkinsonAbilityDirectAttention2025" role="doc-biblioref">Atkinson et al. 2025</a>; <a href="references.html#ref-barackAttentionDeficitsLinked2024" role="doc-biblioref">Barack et al. 2024</a>)</span>. Additionally, online testing makes it convenient to recruit rare patient groups and find closely-matched controls <span class="citation" data-cites="tsayMinimalImpactChronic2024 tsayCerebellarDegenerationImpairs2023">(<a href="references.html#ref-tsayMinimalImpactChronic2024" role="doc-biblioref">Tsay, Chandy, et al. 2024</a>; <a href="references.html#ref-tsayCerebellarDegenerationImpairs2023" role="doc-biblioref">Tsay, Schuck, and Ivry 2023</a>)</span>. Remote testing can also reach infant populations that are logistically difficult to bring into the lab <span class="citation" data-cites="razAsynchronousHandsoffWorkflow2024">(<a href="references.html#ref-razAsynchronousHandsoffWorkflow2024" role="doc-biblioref">Raz et al. 2024</a>)</span>.</p>
+</section>
+<section id="the-principle-in-action" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="the-principle-in-action"><span class="header-section-number">1.4</span> The principle in action</h2>
+<p>Motor adaptation, the process of correcting movement errors in response to changes in the body (e.g., muscle fatigue) and environment (e.g., a new ping-pong paddle), is typically studied in controlled laboratory settings using specialized equipment, such as robotic manipulanda (<a href="#fig-principle-one" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>a). In a typical visuomotor adaptation experiment, participants are asked to use their hand to control an on-screen cursor and to use it to reach towards a target (<a href="#fig-principle-one" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>b). After some period of time with veridical feedback, a visuomotor rotation (e.g., 45°) is introduced between the hand and cursor movements. Participants adjust by changing their hand’s movement angle in the opposite direction of the rotation, gradually aligning the cursor with the target, a process driven by both implicit and explicit motor learning processes.</p>
+<p>Motor learning researchers are often interested in isolating different components of learning. For example, to isolate implicit processes underlying motor adaptation, participants are instructed to forgo their re-aiming strategy and reach straight to the target. Yet, participants often continue to move in an adapted manner (e.g., reaching ~15° clockwise of their intended movement direction). This residual ‘aftereffect’, a measure of implicit motor adaptation, indicates that the sensorimotor map has been recalibrated outside of conscious awareness <span class="citation" data-cites="doyaComplementaryRolesBasal2000 kimPsychologyReachingAction2021 krakauerMotorLearning2019 shadmehrComputationalNeuroanatomyMotor2008 wolpertPrinciplesSensorimotorLearning2011">(<a href="references.html#ref-doyaComplementaryRolesBasal2000" role="doc-biblioref">Doya 2000</a>; <a href="references.html#ref-kimPsychologyReachingAction2021" role="doc-biblioref">H. E. Kim, Avraham, and Ivry 2021</a>; <a href="references.html#ref-krakauerMotorLearning2019" role="doc-biblioref">Krakauer et al. 2019</a>; <a href="references.html#ref-shadmehrComputationalNeuroanatomyMotor2008" role="doc-biblioref">Shadmehr and Krakauer 2008</a>; <a href="references.html#ref-wolpertPrinciplesSensorimotorLearning2011" role="doc-biblioref">Wolpert, Diedrichsen, and Flanagan 2011</a>)</span>.</p>
+<p>However, motor learning studies typically involve small, homogenous samples, raising concerns about the robustness and generalizability of findings beyond the laboratory. To overcome these limitations, many laboratories have recently turned to online crowdsourcing to complement traditional laboratory testing <span class="citation" data-cites="albertCompetitionParallelSensorimotor2022 barradasTheoreticalLimitsSpeed2024 cesanekMotorMemoriesObject2021 coltmanSensitivityErrorVisuomotor2021 kimMotorLearningMovement2022 shyrCaseStudyValidity2024 wangAdvancedFeedbackEnhances2024 warburtonVisuomotorMemoryNot2025 watralComparingMouseTrackpad2023 weightmanResidualErrorsVisuomotor2022">(<a href="references.html#ref-albertCompetitionParallelSensorimotor2022" role="doc-biblioref">Albert et al. 2022</a>; <a href="references.html#ref-barradasTheoreticalLimitsSpeed2024" role="doc-biblioref">Barradas, Koike, and Schweighofer 2024</a>; <a href="references.html#ref-cesanekMotorMemoriesObject2021" role="doc-biblioref">Cesanek et al. 2021</a>; <a href="references.html#ref-coltmanSensitivityErrorVisuomotor2021" role="doc-biblioref">Coltman et al. 2021</a>; <a href="references.html#ref-kimMotorLearningMovement2022" role="doc-biblioref">O. A. Kim, Forrence, and McDougle 2022</a>; <a href="references.html#ref-shyrCaseStudyValidity2024" role="doc-biblioref">Shyr and Joshi 2024</a>; <a href="references.html#ref-wangAdvancedFeedbackEnhances2024" role="doc-biblioref">Wang et al. 2024</a>; <a href="references.html#ref-warburtonVisuomotorMemoryNot2025" role="doc-biblioref">Warburton et al. 2025</a>; <a href="references.html#ref-watralComparingMouseTrackpad2023" role="doc-biblioref">Watral et al. 2023</a>; <a href="references.html#ref-weightmanResidualErrorsVisuomotor2022" role="doc-biblioref">Weightman et al. 2022</a>)</span>. These online tasks are designed to be simple and intuitive, involving standard software (e.g., Google Chrome) and hardware (e.g., the participant’s own trackpad or computer mouse; <a href="#fig-principle-one" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>c). Reassuringly, data collected online has a strong resemblance to data collected in the laboratory (<a href="#fig-principle-one" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>d; <span class="citation" data-cites="albertCompetitionParallelSensorimotor2022">Albert et al. (<a href="references.html#ref-albertCompetitionParallelSensorimotor2022" role="doc-biblioref">2022</a>)</span>).</p>
+<p>Furthermore, the expansive sample sizes in web-based studies can enable us to chip away at longstanding controversies in motor learning literature <span class="citation" data-cites="tsayLargescaleCitizenScience2024">(<a href="references.html#ref-tsayLargescaleCitizenScience2024" role="doc-biblioref">Tsay, Asmerian, et al. 2024</a>)</span>. For example, lab-based studies with smaller samples have produced mixed findings on the effects of aging – some report preserved motor adaptation, others declines, and still others enhancements (see meta-analysis in <span class="citation" data-cites="cisnerosDifferentialAgingEffects2024">Cisneros et al. (<a href="references.html#ref-cisnerosDifferentialAgingEffects2024" role="doc-biblioref">2024</a>)</span>). In contrast, large-scale web-based datasets (n &gt; 1500) reveal a clearer pattern: an inverted-U relationship between age and both early and late adaptation, peaking between ages 35 and 45, along with increased aftereffects in older adults (<a href="#fig-principle-one" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>e). As such, studies that sample different segments of the same inverted-U curve can yield seemingly contradictory results.</p>
+<p>Moreover, web-based approaches have uncovered previously unrecognized constraints on motor adaptation, showing that factors often ignored in lab studies – such as gaming habits, computer use, and motivation – can meaningfully shape learning (<a href="#fig-principle-one" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>f). Together, these crowdsourced findings reveal the hidden landscape of sensorimotor diversity and open new avenues for future research in this domain.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-principle-one" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-principle-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/Rule1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-principle-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Online crowdsourcing replicates in-lab findings and uncovers novel behavioral patterns. (a) Example of a typical laboratory setup for studying motor control and learning. (b) Key phases of a visuomotor adaptation task: During the baseline phase, participants use a manipulandum to reach a visual target, receiving veridical cursor feedback that aligns precisely with the direction of their movement. In the rotation phase, a visuomotor rotation (e.g., 30°) is introduced between input (hand) movement and the visual cursor’s movement. Over time, participants adjust their movements to compensate for the rotation, re-aligning the cursor with the target. When the rotation is removed, participants are instructed to aim directly at the target, foregoing any re-aiming strategy. A residual ‘aftereffect’ typically emerges, providing evidence that implicit motor adaptation has taken place. (c) Example of a typical online setup. (d) Data from a standard visuomotor adaptation task are similar between in-lab and online experiments. Data from <span class="citation" data-cites="albertCompetitionParallelSensorimotor2022">Albert et al. (<a href="references.html#ref-albertCompetitionParallelSensorimotor2022" role="doc-biblioref">2022</a>)</span>. (e) A large-scale online experiment reveals an inverted-U effect of age across early adaptation, late adaptation, and aftereffect phases and uncovers (f) novel constraints of implicit adaptation, for example, with aftereffects varying with the frequency with which participants play video games. Data in (e-f) from <span class="citation" data-cites="tsayLargescaleCitizenScience2024">Tsay, Asmerian, et al. (<a href="references.html#ref-tsayLargescaleCitizenScience2024" role="doc-biblioref">2024</a>)</span>. Hereafter, unless stated otherwise, hollow points show participant averages, solid points, solid lines, or bars show group averages, and error bars and shaded regions show 95% confidence intervals.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-albertCompetitionParallelSensorimotor2022" class="csl-entry" role="listitem">
+Albert, Scott T, Jihoon Jang, Shanaathanan Modchalingam, Bernard Marius ’t Hart, Denise Henriques, Gonzalo Lerner, Valeria Della-Maggiore, Adrian M Haith, John W Krakauer, and Reza Shadmehr. 2022. <span>“Competition Between Parallel Sensorimotor Learning Systems.”</span> <em>eLife</em> 11 (February): e65361. <a href="https://doi.org/10.7554/eLife.65361">https://doi.org/10.7554/eLife.65361</a>.
+</div>
+<div id="ref-atkinsonAbilityDirectAttention2025" class="csl-entry" role="listitem">
+Atkinson, Amy L, Beatriz Pinheiro Sanchez, Matthew Warburton, Heather Allmark, and Richard J Allen. 2025. <span>“The Ability to Direct Attention in Working Memory Is Not Impaired in Adults with Symptoms of <span>ADHD</span>.”</span> <em>Journal of Attention Disorders</em> 29 (9): 684–705. <a href="https://doi.org/10.1177/10870547251330039">https://doi.org/10.1177/10870547251330039</a>.
+</div>
+<div id="ref-barackAttentionDeficitsLinked2024" class="csl-entry" role="listitem">
+Barack, David L, Vera U Ludwig, Felipe Parodi, Nuwar Ahmed, Elizabeth M Brannon, Arjun Ramakrishnan, and Michael L Platt. 2024. <span>“Attention Deficits Linked with Proclivity to Explore While Foraging.”</span> <em>Proceedings of the Royal Society B: Biological Sciences</em> 291 (2017): 20222584. <a href="https://doi.org/10.1098/rspb.2022.2584">https://doi.org/10.1098/rspb.2022.2584</a>.
+</div>
+<div id="ref-barradasTheoreticalLimitsSpeed2024" class="csl-entry" role="listitem">
+Barradas, Victor R., Yasuharu Koike, and Nicolas Schweighofer. 2024. <span>“Theoretical Limits on the Speed of Learning Inverse Models Explain the Rate of Adaptation in Arm Reaching Tasks.”</span> <em>Neural Networks</em> 170 (February): 376–89. <a href="https://doi.org/10.1016/j.neunet.2023.10.049">https://doi.org/10.1016/j.neunet.2023.10.049</a>.
+</div>
+<div id="ref-cesanekMotorMemoriesObject2021" class="csl-entry" role="listitem">
+Cesanek, Evan, Zhaoran Zhang, James N Ingram, Daniel M Wolpert, and J Randall Flanagan. 2021. <span>“Motor Memories of Object Dynamics Are Categorically Organized.”</span> <em>eLife</em> 10 (November): e71627. <a href="https://doi.org/10.7554/eLife.71627">https://doi.org/10.7554/eLife.71627</a>.
+</div>
+<div id="ref-cisnerosDifferentialAgingEffects2024" class="csl-entry" role="listitem">
+Cisneros, Elizabeth, Sheer Karny, Richard B. Ivry, and Jonathan S. Tsay. 2024. <span>“Differential <span>Aging Effects</span> on <span>Implicit</span> and <span>Explicit Sensorimotor Learning</span>.”</span> July 4, 2024. <a href="https://doi.org/10.1101/2024.07.02.601091">https://doi.org/10.1101/2024.07.02.601091</a>.
+</div>
+<div id="ref-coltmanSensitivityErrorVisuomotor2021" class="csl-entry" role="listitem">
+Coltman, Susan K., Robert J. van Beers, W. Pieter Medendorp, and Paul L. Gribble. 2021. <span>“Sensitivity to Error During Visuomotor Adaptation Is Similarly Modulated by Abrupt, Gradual, and Random Perturbation Schedules.”</span> <em>Journal of Neurophysiology</em> 126 (3): 934–45. <a href="https://doi.org/10.1152/jn.00269.2021">https://doi.org/10.1152/jn.00269.2021</a>.
+</div>
+<div id="ref-coutrotGlobalDeterminantsNavigation2018" class="csl-entry" role="listitem">
+Coutrot, Antoine, Ricardo Silva, Ed Manley, Will De Cothi, Saber Sami, Véronique D. Bohbot, Jan M. Wiener, et al. 2018. <span>“Global <span>Determinants</span> of <span>Navigation Ability</span>.”</span> <em>Current Biology</em> 28 (17): 2861–2866.e4. <a href="https://doi.org/10.1016/j.cub.2018.06.009">https://doi.org/10.1016/j.cub.2018.06.009</a>.
+</div>
+<div id="ref-dhakalObservationsTyping1362018" class="csl-entry" role="listitem">
+Dhakal, Vivek, Anna Maria Feit, Per Ola Kristensson, and Antti Oulasvirta. 2018. <span>“Observations on <span>Typing</span> from 136 <span>Million Keystrokes</span>.”</span> In <em>Proceedings of the 2018 <span>CHI Conference</span> on <span>Human Factors</span> in <span>Computing Systems</span></em>, 1–12. Montreal QC Canada: ACM. <a href="https://doi.org/10.1145/3173574.3174220">https://doi.org/10.1145/3173574.3174220</a>.
+</div>
+<div id="ref-doyaComplementaryRolesBasal2000" class="csl-entry" role="listitem">
+Doya, K. 2000. <span>“Complementary Roles of Basal Ganglia and Cerebellum in Learning and Motor Control.”</span> <em>Current Opinion in Neurobiology</em> 10 (6): 732–39. <a href="https://doi.org/10.1016/S0959-4388(00)00153-7">https://doi.org/10.1016/S0959-4388(00)00153-7</a>.
+</div>
+<div id="ref-hydeFirstPersonShooterExpertise2025" class="csl-entry" role="listitem">
+Hyde, Eleanor R A, Robert Schmidt, Daniel J Carroll, and Claudia C. Von Bastian. 2025. <span>“First-<span>Person Shooter Expertise</span>: <span>A Processing Speed</span>, <span>Not Multitasking Advantage</span>.”</span> 2025. <a href="https://doi.org/10.31234/osf.io/t3znr_v1">https://doi.org/10.31234/osf.io/t3znr_v1</a>.
+</div>
+<div id="ref-kimPsychologyReachingAction2021" class="csl-entry" role="listitem">
+Kim, Hyosub E., Guy Avraham, and Richard B. Ivry. 2021. <span>“The <span>Psychology</span> of <span>Reaching</span>: <span>Action Selection</span>, <span>Movement Implementation</span>, and <span>Sensorimotor Learning</span>.”</span> <em>Annual Review of Psychology</em> 72 (1): 61–95. <a href="https://doi.org/10.1146/annurev-psych-010419-051053">https://doi.org/10.1146/annurev-psych-010419-051053</a>.
+</div>
+<div id="ref-kimMotorLearningMovement2022" class="csl-entry" role="listitem">
+Kim, Olivia A., Alexander D. Forrence, and Samuel D. McDougle. 2022. <span>“Motor Learning Without Movement.”</span> <em>Proceedings of the National Academy of Sciences</em> 119 (30): e2204379119. <a href="https://doi.org/10.1073/pnas.2204379119">https://doi.org/10.1073/pnas.2204379119</a>.
+</div>
+<div id="ref-kotheRetentionParticipantsRecruited2019" class="csl-entry" role="listitem">
+Kothe, Emily Jane, and Mathew Ling. 2019. <span>“Retention of Participants Recruited to a Multi-Year Longitudinal Study via <span>Prolific</span>.”</span> September 6, 2019. <a href="https://doi.org/10.31234/osf.io/5yv2u">https://doi.org/10.31234/osf.io/5yv2u</a>.
+</div>
+<div id="ref-krakauerMotorLearning2019" class="csl-entry" role="listitem">
+Krakauer, John W., Alkis M. Hadjiosif, Jing Xu, Aaron L. Wong, and Adrian M. Haith. 2019. <span>“Motor <span>Learning</span>.”</span> In <em>Comprehensive <span>Physiology</span></em>, edited by Ronald Terjung, 1st ed., 613–63. Wiley. <a href="https://doi.org/10.1002/cphy.c170043">https://doi.org/10.1002/cphy.c170043</a>.
+</div>
+<div id="ref-listmanLongTermMotorLearning2021" class="csl-entry" role="listitem">
+Listman, Jennifer B., Jonathan S. Tsay, Hyosub E. Kim, Wayne E. Mackey, and David J. Heeger. 2021. <span>“Long-<span>Term Motor Learning</span> in the <span>‘<span>Wild</span>’</span> <span>With High Volume Video Game Data</span>.”</span> <em>Frontiers in Human Neuroscience</em> 15 (December): 777779. <a href="https://doi.org/10.3389/fnhum.2021.777779">https://doi.org/10.3389/fnhum.2021.777779</a>.
+</div>
+<div id="ref-liuLanguageExperiencePredicts2023" class="csl-entry" role="listitem">
+Liu, Jingxuan, Courtney B. Hilton, Elika Bergelson, and Samuel A. Mehr. 2023. <span>“Language Experience Predicts Music Processing in a Half-Million Speakers of Fifty-Four Languages.”</span> <em>Current Biology</em> 33 (10): 1916–1925.e4. <a href="https://doi.org/10.1016/j.cub.2023.03.067">https://doi.org/10.1016/j.cub.2023.03.067</a>.
+</div>
+<div id="ref-mandlekarRoboTurkCrowdsourcingPlatform2018" class="csl-entry" role="listitem">
+Mandlekar, Ajay, Yuke Zhu, Animesh Garg, Jonathan Booher, Max Spero, Albert Tung, Julian Gao, et al. 2018. <span>“<span>RoboTurk</span>: <span>A Crowdsourcing Platform</span> for <span>Robotic Skill Learning</span> Through <span>Imitation</span>.”</span> November 7, 2018. <a href="https://doi.org/10.48550/arXiv.1811.02790">https://doi.org/10.48550/arXiv.1811.02790</a>.
+</div>
+<div id="ref-petersonUsingLargescaleExperiments2021" class="csl-entry" role="listitem">
+Peterson, Joshua C., David D. Bourgin, Mayank Agrawal, Daniel Reichman, and Thomas L. Griffiths. 2021. <span>“Using Large-Scale Experiments and Machine Learning to Discover Theories of Human Decision-Making.”</span> <em>Science</em> 372 (6547): 1209–14. <a href="https://doi.org/10.1126/science.abe2629">https://doi.org/10.1126/science.abe2629</a>.
+</div>
+<div id="ref-razAsynchronousHandsoffWorkflow2024" class="csl-entry" role="listitem">
+Raz, Gal, Sabrina Piccolo, Janine Medrano, Shari Liu, Kirsten Lydic, Catherine Mei, Victoria Nguyen, Tianmin Shu, and Rebecca Saxe. 2024. <span>“An Asynchronous, Hands-Off Workflow for Looking Time Experiments with Infants.”</span> <em>Developmental Psychology</em> 60 (8): 1447–56. <a href="https://doi.org/10.1037/dev0001791">https://doi.org/10.1037/dev0001791</a>.
+</div>
+<div id="ref-reipsWebBasedResearchPsychology2021" class="csl-entry" role="listitem">
+Reips, Ulf-Dietrich. 2021. <span>“Web-<span>Based Research</span> in <span>Psychology</span>: <span>A Review</span>.”</span> <em>Zeitschrift Für Psychologie</em> 229 (4): 198–213. <a href="https://doi.org/10.1027/2151-2604/a000475">https://doi.org/10.1027/2151-2604/a000475</a>.
+</div>
+<div id="ref-shadmehrComputationalNeuroanatomyMotor2008" class="csl-entry" role="listitem">
+Shadmehr, Reza, and John W. Krakauer. 2008. <span>“A Computational Neuroanatomy for Motor Control.”</span> <em>Experimental Brain Research</em> 185 (3): 359–81. <a href="https://doi.org/10.1007/s00221-008-1280-5">https://doi.org/10.1007/s00221-008-1280-5</a>.
+</div>
+<div id="ref-shmuelofHowMotorSkill2012" class="csl-entry" role="listitem">
+Shmuelof, Lior, John W. Krakauer, and Pietro Mazzoni. 2012. <span>“How Is a Motor Skill Learned? <span>Change</span> and Invariance at the Levels of Task Success and Trajectory Control.”</span> <em>Journal of Neurophysiology</em> 108 (2): 578–94. <a href="https://doi.org/10.1152/jn.00856.2011">https://doi.org/10.1152/jn.00856.2011</a>.
+</div>
+<div id="ref-shyrCaseStudyValidity2024" class="csl-entry" role="listitem">
+Shyr, Megan C., and Sanjay S. Joshi. 2024. <span>“A <span>Case Study</span> of the <span>Validity</span> of <span class="nocase">Web-based Visuomotor Rotation Experiments</span>.”</span> <em>Journal of Cognitive Neuroscience</em> 36 (1): 71–94. <a href="https://doi.org/10.1162/jocn_a_02080">https://doi.org/10.1162/jocn_a_02080</a>.
+</div>
+<div id="ref-smithConvenientSolutionUsing2015" class="csl-entry" role="listitem">
+Smith, Nicholas A., Isaac E. Sabat, Larry R. Martinez, Kayla Weaver, and Shi Xu. 2015. <span>“A <span>Convenient Solution</span>: <span>Using MTurk To Sample From Hard-To-Reach Populations</span>.”</span> <em>Industrial and Organizational Psychology</em> 8 (2): 220–28. <a href="https://doi.org/10.1017/iop.2015.29">https://doi.org/10.1017/iop.2015.29</a>.
+</div>
+<div id="ref-tsayLargescaleCitizenScience2024" class="csl-entry" role="listitem">
+Tsay, Jonathan S., Hrach Asmerian, Laura T. Germine, Jeremy Wilmer, Richard B. Ivry, and Ken Nakayama. 2024. <span>“Large-Scale Citizen Science Reveals Predictors of Sensorimotor Adaptation.”</span> <em>Nature Human Behaviour</em>, January. <a href="https://doi.org/10.1038/s41562-023-01798-0">https://doi.org/10.1038/s41562-023-01798-0</a>.
+</div>
+<div id="ref-tsayMinimalImpactChronic2024" class="csl-entry" role="listitem">
+Tsay, Jonathan S., Anisha M. Chandy, Romeo Chua, R. Chris Miall, Jonathan Cole, Alessandro Farnè, Richard B. Ivry, and Fabrice R. Sarlegna. 2024. <span>“Minimal Impact of Chronic Proprioceptive Loss on Implicit Sensorimotor Adaptation and Perceived Movement Outcome.”</span> <em>Journal of Neurophysiology</em> 132 (3): 770–80. <a href="https://doi.org/10.1152/jn.00096.2024">https://doi.org/10.1152/jn.00096.2024</a>.
+</div>
+<div id="ref-tsayCerebellarDegenerationImpairs2023" class="csl-entry" role="listitem">
+Tsay, Jonathan S., Lauren Schuck, and Richard B. Ivry. 2023. <span>“Cerebellar <span>Degeneration Impairs Strategy Discovery</span> but <span>Not Strategy Recall</span>.”</span> <em>The Cerebellum</em>. <a href="https://doi.org/10.1007/s12311-022-01500-6">https://doi.org/10.1007/s12311-022-01500-6</a>.
+</div>
+<div id="ref-wangAdvancedFeedbackEnhances2024" class="csl-entry" role="listitem">
+Wang, Tianhe, Guy Avraham, Jonathan S. Tsay, Tanvi Thummala, and Richard B. Ivry. 2024. <span>“Advanced Feedback Enhances Sensorimotor Adaptation.”</span> <em>Current Biology</em> 34 (5): 1076–1085.e5. <a href="https://doi.org/10.1016/j.cub.2024.01.073">https://doi.org/10.1016/j.cub.2024.01.073</a>.
+</div>
+<div id="ref-warburtonVisuomotorMemoryNot2025" class="csl-entry" role="listitem">
+Warburton, Matthew, Carlo Campagnoli, Mark Mon-Williams, Faisal Mushtaq, and J. Ryan Morehead. 2025. <span>“Visuomotor Memory Is Not Bound to Visual Motion.”</span> <em>Journal of Neuroscience</em> 45 (17): e1884242025. <a href="https://doi.org/10.1523/JNEUROSCI.1884-24.2025">https://doi.org/10.1523/JNEUROSCI.1884-24.2025</a>.
+</div>
+<div id="ref-watralComparingMouseTrackpad2023" class="csl-entry" role="listitem">
+Watral, Alexandra T., Abby Morley, Robert Pastel, and Kevin M. Trewartha. 2023. <span>“Comparing Mouse Versus Trackpad Input in a Web-Based App for Assessing Motor Learning.”</span> <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> 67 (1): 2113–19. <a href="https://doi.org/10.1177/21695067231192911">https://doi.org/10.1177/21695067231192911</a>.
+</div>
+<div id="ref-weightmanResidualErrorsVisuomotor2022" class="csl-entry" role="listitem">
+Weightman, Matthew, John-Stuart Brittain, R. Chris Miall, and Ned Jenkinson. 2022. <span>“Residual Errors in Visuomotor Adaptation Persist Despite Extended Motor Preparation Periods.”</span> <em>Journal of Neurophysiology</em> 127 (2): 519–28. <a href="https://doi.org/10.1152/jn.00301.2021">https://doi.org/10.1152/jn.00301.2021</a>.
+</div>
+<div id="ref-wolpertPrinciplesSensorimotorLearning2011" class="csl-entry" role="listitem">
+Wolpert, Daniel M., Jörn Diedrichsen, and J. Randall Flanagan. 2011. <span>“Principles of Sensorimotor Learning.”</span> <em>Nature Reviews Neuroscience</em> 12 (12): 739–51. <a href="https://doi.org/10.1038/nrn3112">https://doi.org/10.1038/nrn3112</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./designing.html" class="pagination-link" aria-label="Planning the experiment">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Planning the experiment</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./2_plan_for_technical_variability.html" class="pagination-link" aria-label="Plan for technical variability">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Plan for technical variability</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

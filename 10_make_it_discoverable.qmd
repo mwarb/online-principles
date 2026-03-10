@@ -1,0 +1,21 @@
+# Make it discoverable
+
+Laboratory experiments often rely on specialized, proprietary software, often making it impractical for other researchers to run or validate them. In contrast, online experiments are inherently playable and shareable, which enhances replicability and transparency.
+
+## Produce a playable demo
+
+Including a playable demo directly in the research publication allows researchers to experience the task first-hand and understand exactly what the participants saw and were instructed to do. Such demos can be much shorter than the full experiment while still showcasing key stimuli, manipulations, and experimental conditions.
+
+## Provide an implementation guide
+
+Posting the source code of an experiment to a public repository such as the Open Science Framework or GitHub allows others to verify implementation details and increases transparency. Public code also provides concrete examples of how specific experiments can be adapted for online use. Complementing the code with a clear implementation guide further boosts the likelihood that others will adopt and build on your experiment.
+
+## Publish the data
+
+Making experimental data publicly available allows others to evaluate the reproducibility of reported results and repurpose the data for replication, meta-analyses, or computational theorizing. Online pipelines make this straightforward, often exporting to shareable formats like CSV. Some even adopt a ‘born-open’ model, where data are made public immediately upon collection [@deleeuwDataPipeBornopenData2023].
+
+## The principle in action
+
+These open-science principles are embedded in our own workflow. We have made a range of motor learning experimental demos publicly available ([tsaylab.com/play](tsaylab.com/play)); other examples include The Music Lab ([themusiclab.org/](themusiclab.org/)), TestMyBrain.org (<https://testmybrain.org/>), and Pavlovia ([pavlovia.org/](pavlovia.org/)). We have also developed in-depth implementation guides for our online experiment platforms. For example, the Unity Experiment Framework extends the Unity game engine for use in behavioral research [@brookesStudyingHumanBehavior2019], and the OnPoint platform provides a JavaScript framework for conducting online motor experiments [@tsayMovingOutsideLab2021]; other examples include Ouvrai [@cesanekOuvraiOpensAccess2024] and MovementVR [@rossi2025movementvr], frameworks for crowdsourcing remote virtual reality experiments.
+
+To make our data publicly accessible, we created the OpenMotor database ([osf.io/aknqj](osf.io/aknqj)), which houses a range of motor experiment datasets in a standardized format. While still in its early developmental stages, OpenMotor serves as a community resource that will hopefully accelerate progress [@rahnevConfidenceDatabase2020; @yaronConTraStDatabaseAnalysing2022]. Together, making experiments discoverable can transform individual projects into community resources that accelerate progress across the field.

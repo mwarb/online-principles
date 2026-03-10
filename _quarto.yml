@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: docs
+  
+book:
+  title: How to run online behavioral experiments
+  author: Matthew Warburton, Jonathan S. Tsay
+  date: "2026"
+  chapters:
+    - index.qmd
+    - 0_introduction.qmd
+    - part: designing.qmd
+      chapters:
+        - 1_maximize_the_advantages.qmd
+        - 2_plan_for_technical_variability.qmd
+        - 3_plan_for_behavioral_variability.qmd
+        - 4_validate_your_experiment.qmd
+        - 4.1_good_experiment.qmd
+    - part: running.qmd
+      chapters:
+       - 5_recruit_participants_strategically.qmd
+       - 6_instruct_clearly.qmd
+       - 7_make_it_engaging.qmd
+       - 8_collect_data_comprehensively.qmd
+       - 9_respect_your_participants.qmd
+    - part: After the experiment
+      chapters: 
+        - 10_make_it_discoverable.qmd
+    - 11_closing.qmd
+    - references.qmd
+  google-analytics: 
+    tracking-id: "G-S4B0H96CC5"
+    storage: none
+    anonymize-ip: true
+  open-graph: true
+    
+
+format:
+  html:
+    theme: cosmo
+    
+bibliography: "C:/Users/three/OneDrive/Research/LitFolder/MyLibrary.bib"

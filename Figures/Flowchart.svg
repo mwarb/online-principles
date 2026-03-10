@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="78mm"
+   height="160mm"
+   viewBox="0 0 78 160"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Flowchart.svg"
+   inkscape:export-filename="Flowchart.png"
+   inkscape:export-xdpi="600"
+   inkscape:export-ydpi="600"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.4091398"
+     inkscape:cx="179.52466"
+     inkscape:cy="526.32894"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow"
+       refX="4"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="RoundedArrow"
+       markerWidth="4"
+       markerHeight="3.8668196"
+       viewBox="0 0 6.1347524 5.9304953"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="m -0.14780188,-2.873901 4.49560378,2.24780197 a 0.7,0.7 0 0 1 0,1.25219806 L -0.14780188,2.873901 A 0.8652476,0.8652476 0 0 1 -1.4,2.1 v -4.2 a 0.8652476,0.8652476 0 0 1 1.25219812,-0.773901 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none;stroke-width:0.7"
+         id="path1367" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffe5ff;fill-opacity:1;stroke:#333333;stroke-width:0.499998;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect234"
+       width="71.128151"
+       height="55.5"
+       x="2.0173526"
+       y="19.649315"
+       rx="2"
+       ry="1.5744684" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect1624"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866613"
+       y="22.018145"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.409504"
+       y="25.077503"
+       id="text1680"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.409504"
+         y="25.077503"
+         id="tspan1732">Principle 1: Maximize the advantages</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,26.735298 v 4.79171"
+       id="path2531" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect5334"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866613"
+       y="31.735878"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect5336"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866628"
+       y="41.453613"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.456924"
+       y="34.786575"
+       id="text2466"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.456924"
+         y="34.786575"
+         id="tspan2464">Principle 2: Plan for technical variability</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,36.453029 v 4.79171"
+       id="path6362" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.411594"
+       y="44.808777"
+       id="text2922"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.411594"
+         y="44.808777"
+         id="tspan2920">Principle 3: Plan for behavioral variablity</tspan></text>
+    <rect
+       style="fill:#e9e5ff;fill-opacity:1;stroke:#333333;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect6432"
+       width="71.128151"
+       height="48.184002"
+       x="2.0173526"
+       y="85.199516"
+       rx="2"
+       ry="2.0000105" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect6434"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866613"
+       y="87.567589"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.409504"
+       y="90.620316"
+       id="text6438"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.409504"
+         y="90.620316"
+         id="tspan6436">Principle 5: Recruit participants strategically</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,92.284728 v 4.791707"
+       id="path6440" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect6442"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866613"
+       y="97.285332"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect6444"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866628"
+       y="107.00309"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect6446"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866613"
+       y="116.72086"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.456924"
+       y="100.32935"
+       id="text6450"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.456924"
+         y="100.32935"
+         id="tspan6448">Principle 6: Instruct clearly</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,102.00246 v 4.79171"
+       id="path6452" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.411594"
+       y="110.35155"
+       id="text6456"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.411594"
+         y="110.35155"
+         id="tspan6454">Principle 7: Make it engaging</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,111.7202 v 4.79169"
+       id="path6458" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.411594"
+       y="120.06829"
+       id="text6462"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.411594"
+         y="120.06829"
+         id="tspan6460">Principle 8: Collect data comprehensively</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect8727"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866604"
+       y="126.43857"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,121.4379 v 4.79171"
+       id="path8729" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.456924"
+       y="129.48724"
+       id="text8735"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.456924"
+         y="129.48724"
+         id="tspan8733">Principle 9: Respect your participants</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="M 35.176818,70.488982 V 84.593469"
+       id="path6370" />
+    <rect
+       style="fill:#e5f6ff;fill-opacity:1;stroke:#333333;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect10341"
+       width="71.128151"
+       height="9.3128262"
+       x="2.0173526"
+       y="143.09979"
+       rx="2"
+       ry="2" />
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect10343"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866628"
+       y="145.46849"
+       rx="1.0849138"
+       ry="1.0162975" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.411594"
+       y="148.813"
+       id="text10347"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.411594"
+         y="148.813"
+         id="tspan10345">Principle 10: Make it discoverable</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176816,131.15557 v 14.10452"
+       id="path10359" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176815,150.1225 4.97e-4,4.95408 H 76.000001 V 2.8822675 H 35.176227 l 2.97e-4,3.8672111"
+       id="path9505"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="3.1863008"
+       y="17.579201"
+       id="text11117"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         id="tspan11115"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="3.1863008"
+         y="17.579201">Planning the experiment</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="3.1863008"
+       y="83.108429"
+       id="text11121"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         id="tspan11119"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="3.1863008"
+         y="83.108429">Running the experiment</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.85655px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="3.1863008"
+       y="141.00314"
+       id="text11125"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         id="tspan11123"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.85655px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="3.1863008"
+         y="141.00314">After the experiment</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#333333;stroke-width:0.35;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect2194"
+       width="61.180313"
+       height="4.6500001"
+       x="4.5866628"
+       y="51.237255"
+       rx="1.0849138"
+       ry="0.82300884" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,46.170824 v 4.791709"
+       id="path2196" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.411594"
+       y="54.591614"
+       id="text2202"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.411594"
+         y="54.591614"
+         id="tspan2200">Principle 4: Validate your experiment</tspan></text>
+    <rect
+       style="fill:#ffecd9;fill-opacity:1;stroke:#333333;stroke-width:0.402071;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect6653"
+       width="44.623623"
+       height="6.1365786"
+       x="21.210453"
+       y="9.7208099"
+       rx="1"
+       ry="1"
+       transform="matrix(1,0,-0.65254335,0.7577514,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.430988"
+       y="10.748992"
+       id="text8201"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+         x="35.430988"
+         y="10.748992"
+         id="tspan8199">An online experiment idea</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176819,12.025223 v 9.787676"
+       id="path8255" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="m 35.176818,56.06226 v 4.791709"
+       id="path8261" />
+    <path
+       id="path8263"
+       style="fill:#ffffd9;fill-opacity:1;stroke:#333333;stroke-width:0.349999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 35.176818,61.198546 5.4501775,66.268081 35.176818,70.846646 v 0 L 64.903459,65.987068 35.176818,61.196642 Z"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 64.903459,65.987067 H 76.015503"
+       id="path8271" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="69.485748"
+       y="65.255333"
+       id="text8275"><tspan
+         sodipodi:role="line"
+         id="tspan8273"
+         style="stroke-width:0.264583"
+         x="69.485748"
+         y="65.255333">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="39.318279"
+       y="73.750923"
+       id="text8281"><tspan
+         sodipodi:role="line"
+         id="tspan8279"
+         style="stroke-width:0.264583"
+         x="39.318279"
+         y="73.750923">Yes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.05;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="35.399982"
+       y="66.106926"
+       id="text372"
+       transform="scale(0.99989831,1.0001017)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.399982"
+         y="66.106926"
+         id="tspan368">Is the experiment</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.399982"
+         y="69.070259"
+         id="tspan370">suitable?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="55.280876"
+       y="158.42656"
+       id="text377"><tspan
+         sodipodi:role="line"
+         id="tspan375"
+         style="font-size:2.82222px;stroke-width:0.264583"
+         x="55.280876"
+         y="158.42656">Integrate learnings</tspan></text>
+  </g>
+</svg>

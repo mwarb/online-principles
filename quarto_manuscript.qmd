@@ -1,0 +1,691 @@
+---
+title: "Ten Principles for Crowdsourcing Human Behavior Online"
+shorttitle: "Online experiment principles"
+author:
+  - name: Matthew Warburton
+    corresponding: true
+    orcid: 0000-0001-5309-4424
+    email: M.Warburton@leeds.ac.uk
+    affiliations:
+      - name: University of Leeds
+        department: School of Psychology
+        address: University of Leeds
+        city: Leeds
+        region: West Yorkshire
+        country: UK
+        postal-code: LS2 9JT
+    role: 
+      - conceptualization
+      - vizualisation
+      - writing
+  - name: Jonathan S. Tsay
+    corresponding: true
+    orcid: 0000-0002-3992-9023
+    email: jtsay2@andrew.cmu.edu
+    affiliations:
+      - name: Carnegie Mellon University
+        department: Department of Psychology
+        address: Carnegie Mellon University
+        city: Pittsburgh
+        region: PA
+        country: USA
+        postal-code: 15213-3890
+    role: 
+      - conceptualization
+      - vizualisation
+      - writing
+author-note:
+  status-changes: 
+    affiliation-change: ~
+    deceased: ~
+  disclosures:
+    study-registration: ~
+    data-sharing: No new data were generated in this paper. Where existing data have been used, the data and analysis scripts are available at [https://osf.io/kh7sf/](https://osf.io/kh7sf/).
+    related-report: ~
+    conflict-of-interest: The authors declare no conflicts of interest.
+    financial-support: JST is funded by Carnegie Mellon University Dietrich College Seed Grant.
+    gratitude: ~
+    authorship-agreements: ~
+abstract: "Human behavioral research increasingly depends on online crowdsourcing. There are many advantages to doing so – including parallel recruitment of participants, access to more diverse samples, and the possibility of large-scale data collection. However, these advantages come at the cost of full experimental control, a daunting tradeoff for many researchers. To address common challenges in crowdsourced research, we outline ten principles to guide the design and execution of rigorous, reliable experiments, empowering researchers to harness the full potential of this approach."
+keywords: [online experiments, crowdsourcing, human behavior, motor learning, psychology]
+bibliography: "C:/Users/three/OneDrive/Research/LitFolder/MyLibrary.bib"
+a4paper: true
+floatsintext: true
+csl: nature.csl
+format:
+  apaquarto-docx: 
+    numbered-lines: true
+    link-citations: false
+  apaquarto-pdf:
+    documentmode: jou
+    numbered-lines: false
+    link-citations: true
+    journal: "\\small This is a preprint and has not been peer-reviewed."
+    geometry:
+      - right=1.27cm
+      - left=1.27cm
+      - bottom=2cm
+      - top=2cm
+    mainfont: "SourceSans3-Regular"
+    fontsize: 10pt
+  html:
+    default
+---
+
+Careful behavioral observations can reveal the intricate workings of the human mind [@krakauerNeuroscienceNeedsBehavior2017; @nivPrimacyBehavioralResearch2021]. For example, how vigorously we move betrays our preferences: we walk more briskly when meeting a close friend and drag our feet when heading to an unwelcome appointment [@shadmehrMovementVigorReflection2019]. Similarly, our behavior reflects our confidence: we might decisively grab our favorite drink at a breakfast buffet but tentatively hover between the different pastry options [@dotanOnlineConfidenceMonitoring2018].
+
+For much of its history, behavioral research has been conducted in the laboratory setting, where strict oversight ensures consistency. Such experimental control ensures that the studied behaviors are not confounded by environmental factors, for example, by minimizing variability from external distractions that might otherwise alter participants' responses. Moreover, in-lab testing grants access to specialized, often costly equipment – such as robotic manipulanda that can passively move the arm or apply perturbing forces – allowing researchers to precisely manipulate and measure behavior that would be difficult to capture otherwise.
+
+However, laboratory experiments have notable limitations. They are time-intensive, typically allowing only a few participants to be tested at once, often leading to small, underpowered samples collected over restricted timeframes [@szucsEmpiricalAssessmentPublished2017]. As a result, findings can be difficult to replicate [@cohenStatisticalPowerAbnormalsocial1962; @marekReproducibleBrainwideAssociation2022; @opensciencecollaborationEstimatingReproducibilityPsychological2015]. Furthermore, laboratory studies often involve a homogeneous group of participants, for example ‘WEIRD’ individuals [@henrichWeirdestPeopleWorld2010] or undergraduate students [@arnettNeglected95Why2008], which may limit the extent to which research findings generalize to the broader population [@gordonScienceSophomoreRevisited1986; @henrichWeirdestPeopleWorld2010].
+
+Behavioral researchers are increasingly moving their studies beyond the confines of the laboratory [@valletCanCognitiveNeuroscience2023]. One way to do so is through field-based experiments, testing participants in classrooms, clinics, workplaces, or other real-world settings [e.g., @banerjeeChildrensArithmeticSkills2025; @cullenChoosingLearnImportance2024]. Another way is crowdsourcing, the practice of recruiting large and diverse groups of individuals, which offers a compelling means of scaling behavioral research. By harnessing distributed participants, crowdsourcing overcomes many of the limitations of traditional in-person testing.
+
+Crowdsourcing comes in many flavors. Some researchers leverage opportunity sampling at science fairs or museum exhibitions, combining the rigor of in-person testing with access to broader demographics [@clodeEvaluatingInitialUsability2024; @dasMicroofflineGainsNot2025; @ruitenbergDevelopmentalAgeDifferences2023; @turnerDevelopmentalChangesIndividual2023]. However, the biggest boom in crowdsourced research has been the use of online experiments, where participants complete experiments remotely, using personal devices such as computers [@reipsWebExperimentalPsychology2001], phones [@coutrotGlobalDeterminantsNavigation2018], or virtual reality headsets [@cesanekOuvraiOpensAccess2024].
+
+What are the advantages of online behavioral experiments? Unlike in-person studies, online experiments can be accessed by many individuals simultaneously, significantly reducing the time required for data collection [@reipsWebExperimentMethod2000]. Additionally, this efficiency allows researchers to tackle questions that would be impractical or prohibitively resource-intensive for traditional lab settings – for example, investigating how a given psychological function varies continuously with age, rather than relying on categorical comparisons between ‘younger’ and ‘older’ groups [@hartshorneWhenDoesCognitive2015; @spiersExplainingWorldWideVariation2023; @tsayLargescaleCitizenScience2024]. Not to mention that the large sample sizes provide greater statistical power to detect meaningful behavioral effects and monitor changes over time, thereby enhancing the likelihood of replicable findings [@johnsonCrowdsourcingCognitiveSystems2022].
+
+If a central goal of behavioral research is to uncover human universals, then crowdsourcing offers a powerful advantage: access to a more diverse and representative sample than is typically available in laboratory settings [@caslerSeparateEqualComparison2013; @goslingWiredNotWEIRD2010; @hartshorneThousandStudiesPrice2019; @smithConvenientSolutionUsing2015]. That is, researchers can use online crowdsourcing to chart the hidden landscape of perceptual, cognitive, and motor diversity in the population. Together, these advantages have established online experiments as a staple in the modern researcher's toolbox, enabling unprecedented insights into human behavior across a wide range of subfields.
+
+However, online experiments come with notable trade-offs – most prominently, the loss of experimental control. First, researchers sacrifice some control over hardware, since participants typically use their own devices, introducing variability in stimulus presentation times, response times, and the peripherals used to make responses [@bridgesTimingMegastudyComparing2020]. When not appropriately handled, these factors may introduce misleading or spurious correlations [@pronkMentalChronometryPocket2020]. Second, researchers sacrifice some control over their participants. It is often difficult to know whether participants understand the instructions and/or remain engaged throughout the task, and if unaddressed, these issues can compromise data quality and yield misleading conclusions.
+
+## Ten principles for crowdsourcing behavioral experiments online
+
+To tackle these challenges, we present a beginner-friendly, practical guide to conducting high-quality crowdsourced behavioral experiments online ([@fig-principles]). Rather than focusing on implementation details, we distil ten principles that provide a structured framework for optimizing online study design, evaluating data quality, and mitigating common pitfalls. Each principle is grounded in concrete examples from crowdsourced motor control and learning studies, a domain that places stringent demands on experimental control and behavioral measurement. Demonstrating success under these conditions establishes both the feasibility and broad applicability of the ten principles across behavioral domains and crowdsourcing platforms.
+
+```{r fig-principles}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Ten principles for crowdsourcing behavioral experiments."
+#| fig-cap: "Ten principles for crowdsourcing behavioral experiments."
+#| out.width: 100%
+#| apa-twocolumn: false
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Flowchart.png")
+} else {
+  knitr::include_graphics("../Figures/Flowchart.pdf")
+}
+```
+
+# Planning the experiment
+
+The first four principles, organized under the theme “Planning the Experiment,” ensure that core research ideas are effectively adapted to an online format – maximizing the benefits of crowdsourced research while minimizing its limitations.
+
+## Principle 1: Maximize the advantages of online crowdsourcing {#sec-princ-one}
+
+The convenience of online testing offers many advantages for both researchers and participants. It not only accelerates data collection but also enables experiments to be run concurrently at a scale rarely achievable in the lab. Moreover, online platforms make it possible to recruit populations that are less easily accessible in traditional lab-based research.
+
+### Advantage 1: Designs with many participants
+
+Ready access to crowdsourced samples that can be tested in parallel can enable experiments to be conducted on an unprecedented scale [@reipsWebBasedResearchPsychology2021]. Such large-scale studies offer many unique opportunities: they provide robust evidence for small effects [@tsayLargescaleCitizenScience2024]; allow multiple moderating variables to be tested concurrently [@coutrotGlobalDeterminantsNavigation2018]; and enable researchers to assess how broadly effects generalize across diverse groups [@liuLanguageExperiencePredicts2023].
+
+Concurrent participation introduces a powerful invariance to study design: recruiting 200 participants to each complete 20 conditions requires no more effort than recruiting 20 participants to complete 200 conditions each. This “many-participants few-trials” design, impractical in the lab, enables researchers to test generalizability across massive stimulus sets, such as evaluating a host of decision-making models on 10,000 risky gambles [@petersonUsingLargescaleExperiments2021] or assessing typing ability across 1,500 sentences [@dhakalObservationsTyping1362018]. Similar designs have also transformed robotics research: for example, the ROBOTURK platform crowdsourced over 2,200 high-quality teleoperated demonstrations in just 22 hours, generating more than 100 hours of data for optimizing surgical procedures [@mandlekarRoboTurkCrowdsourcingPlatform2018].
+
+### Advantage 2: Designs with many timepoints
+
+Online crowdsourcing is particularly well-suited for longitudinal studies. Large cohorts can be readily recruited for multi-session participation, and retention rates often rival, or even surpass, those of traditional studies lasting months or years [@kotheRetentionParticipantsRecruited2019]. For example, a recent study tracked first-person shooter performance across 100 days of practice [@listmanLongTermMotorLearning2021], far exceeding the typical 5-day span of in-lab skill learning studies [e.g., @shmuelofHowMotorSkill2012].
+
+### Advantage 3: Designs with specific populations
+
+Online recruitment makes it possible to access specific, hard to reach demographics that are often difficult to recruit, or even unattainable, through traditional in-lab methods [@smithConvenientSolutionUsing2015]. Many participant pools and citizen science approaches enable selective recruitment by demographics, making it straightforward to target specific populations, for example, video game players [@hydeFirstPersonShooterExpertise2025], left-handed individuals, or individuals reporting neuropsychiatric symptoms [@atkinsonAbilityDirectAttention2025; @barackAttentionDeficitsLinked2024]. Additionally, online testing makes it convenient to recruit rare patient groups and find closely-matched controls [@tsayMinimalImpactChronic2024; @tsayCerebellarDegenerationImpairs2023]. Remote testing can also reach infant populations that are logistically difficult to bring into the lab [@razAsynchronousHandsoffWorkflow2024].
+
+### The principle in action
+
+```{r fig-principle-one}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Online crowdsourcing replicates in-lab findings and uncovers novel behavioral patterns."
+#| fig-cap: "Online crowdsourcing replicates in-lab findings and uncovers novel behavioral patterns."
+#| apa-note: "(a) Example of a typical laboratory setup for studying motor control and learning. (b) Key phases of a visuomotor adaptation task: During the baseline phase, participants use a manipulandum to reach a visual target, receiving veridical cursor feedback that aligns precisely with the direction of their movement. In the rotation phase, a visuomotor rotation (e.g., 30°) is introduced between input (hand) movement and the visual cursor's movement. Over time, participants adjust their movements to compensate for the rotation, re-aligning the cursor with the target. When the rotation is removed, participants are instructed to aim directly at the target, foregoing any re-aiming strategy. A residual ‘aftereffect’ typically emerges, providing evidence that implicit motor adaptation has taken place. (c) Example of a typical online setup. (d) Data from a standard visuomotor adaptation task are similar between in-lab and online experiments. Data from @albertCompetitionParallelSensorimotor2022. (e) A large-scale online experiment reveals an inverted-U effect of age across early adaptation, late adaptation, and aftereffect phases and uncovers (f) novel constraints of implicit adaptation, for example, with aftereffects varying with the frequency with which participants play video games. Data in (e-f) from @tsayLargescaleCitizenScience2024. Hereafter, unless stated otherwise, hollow points show participant averages, solid points, solid lines, or bars show group averages, and error bars and shaded regions show 95% confidence intervals."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule1.png")
+} else {
+  knitr::include_graphics("../Figures/Rule1.pdf")
+}
+```
+
+Motor adaptation, the process of correcting movement errors in response to changes in the body (e.g., muscle fatigue) and environment (e.g., a new ping-pong paddle), is typically studied in controlled laboratory settings using specialized equipment, such as robotic manipulanda ([@fig-principle-one]a). In a typical visuomotor adaptation experiment, participants are asked to use their hand to control an on-screen cursor and to use it to reach towards a target ([@fig-principle-one]b). After some period of time with veridical feedback, a visuomotor rotation (e.g., 45°) is introduced between the hand and cursor movements. Participants adjust by changing their hand’s movement angle in the opposite direction of the rotation, gradually aligning the cursor with the target, a process driven by both implicit and explicit motor learning processes.
+
+Motor learning researchers are often interested in isolating different components of learning. For example, to isolate implicit processes underlying motor adaptation, participants are instructed to forgo their re-aiming strategy and reach straight to the target. Yet, participants often continue to move in an adapted manner (e.g., reaching \~15° clockwise of their intended movement direction). This residual ‘aftereffect’, a measure of implicit motor adaptation, indicates that the sensorimotor map has been recalibrated outside of conscious awareness [@doyaComplementaryRolesBasal2000; @kimPsychologyReachingAction2021; @krakauerMotorLearning2019; @shadmehrComputationalNeuroanatomyMotor2008; @wolpertPrinciplesSensorimotorLearning2011].
+
+However, motor learning studies typically involve small, homogenous samples, raising concerns about the robustness and generalizability of findings beyond the laboratory. To overcome these limitations, many laboratories have recently turned to online crowdsourcing to complement traditional laboratory testing [@albertCompetitionParallelSensorimotor2022; @barradasTheoreticalLimitsSpeed2024; @cesanekMotorMemoriesObject2021; @coltmanSensitivityErrorVisuomotor2021; @kimMotorLearningMovement2022; @shyrCaseStudyValidity2024; @wangAdvancedFeedbackEnhances2024; @warburtonVisuomotorMemoryNot2025; @watralComparingMouseTrackpad2023; @weightmanResidualErrorsVisuomotor2022]. These online tasks are designed to be simple and intuitive, involving standard software (e.g., Google Chrome) and hardware (e.g., the participant’s own trackpad or computer mouse; [@fig-principle-one]c). Reassuringly, data collected online has a strong resemblance to data collected in the laboratory ([@fig-principle-one]d; @albertCompetitionParallelSensorimotor2022).
+
+Furthermore, the expansive sample sizes in web-based studies can enable us to chip away at longstanding controversies in motor learning literature [@tsayLargescaleCitizenScience2024]. For example, lab-based studies with smaller samples have produced mixed findings on the effects of aging – some report preserved motor adaptation, others declines, and still others enhancements (see meta-analysis in @cisnerosDifferentialAgingEffects2024). In contrast, large-scale web-based datasets (n \> 1500) reveal a clearer pattern: an inverted-U relationship between age and both early and late adaptation, peaking between ages 35 and 45, along with increased aftereffects in older adults ([@fig-principle-one]e). As such, studies that sample different segments of the same inverted-U curve can yield seemingly contradictory results.
+
+Moreover, web-based approaches have uncovered previously unrecognized constraints on motor adaptation, showing that factors often ignored in lab studies – such as gaming habits, computer use, and motivation – can meaningfully shape learning ([@fig-principle-one]f). Together, these crowdsourced findings reveal the hidden landscape of sensorimotor diversity and open new avenues for future research in this domain.
+
+## Principle 2: Plan for technical variability {#sec-princ-two}
+
+A primary concern with online crowdsourcing is the variability participants’ hardware and software. Computers may differ in screen size and resolution, and input devices can range from mice to trackballs to trackpads, each with different characteristics. Although these factors may appear trivial, they can sometimes compromise the ability to address key research questions [@germineDigitalNeuropsychologyChallenges2019]. Below, we outline strategies to account for variability in software and hardware through experimental design and data analysis.
+
+### Combat technical variability through experiment design
+
+Modern computing systems exhibit variability both within a single setup and across different setups. Within a given setup, response times measured via key presses can vary by roughly 30 ms (SDstandard deviation). Across setups, differences in operating systems and browsers can shift mean response times by as much as 80 ms [@anwyl-irvineRealisticPrecisionAccuracy2021; @bridgesTimingMegastudyComparing2020]. Hardware differences can further exacerbate behavioral variability, with reaction times differing by 70 ms across different touchscreen devices [@schatzValidatingAccuracyReaction2015] and by 130 ms between mouse and trackpad inputs [@warburtonInputDeviceMatters2025; @watralComparingMouseTrackpad2023].
+
+To mitigate technical variability, we recommend the use of within-subject experimental designs where possible. This approach effectively controls for both within- and between-setup variability, since setup-specific noise would evenly impact all conditions.
+
+```{r fig-technical-variability}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Technical variability can introduce variability or bias to the data."
+#| fig-cap: "Technical variability can introduce variability or bias to the data."
+#| apa-note: "(a) When substantial technical variability is added to behavioral variability, statistical power to detect true effects is reduced. (b) If random assignment fails to balance extraneous variables (e.g., input device) between groups (e.g., sex/gender), there can be spurious group differences in the dependent variable (e.g., response time) even in the absence of a true difference. (c) If sex/gender correlates with input device, and that device itself correlates with response time, a spurious correlation between sex/gender and response time may emerge."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/TechnicalVariability.png")
+} else {
+  knitr::include_graphics("../Figures/TechnicalVariability.pdf")
+}
+```
+
+However, when within-subject designs are infeasible and between-subject designs are required, it becomes especially important to understand the two keys ways in which technical variability can undermine data quality: first, technological variability adds variability around group means and thus reduces statistical power to detect effects of interest ([@fig-technical-variability]a); and second, if random participant assignment fails to balance technical variables across conditions, between-subject designs can lead to spurious effects ([@fig-technical-variability]b).
+
+Both risks above are especially problematic when technical variability approaches or exceeds natural behavioral variability – for example, adding 35 ms of technical variability to 70 ms of behavioral variability raises a group’s standard deviation to just 78 ms, a negligible effect on group comparisons. In contrast, adding technical variability (70 ms) equal to behavioral variability (70 ms) raises a group’s standard deviation to 99 ms, a distortion that can obscure group differences. Nonetheless, larger sample sizes can help offset these risks, and a priori power analyses can clarify how technical noise affects the inferences drawn (see [Box 1](#sec-box-one)).
+
+Studies of individual differences are especially vulnerable to technical variability. For example, if a demographic factor of interest (e.g., sex/gender) is associated with the hardware participants use (e.g., men more often use trackpads; women more often use mice), and these devices differ in response time properties, analyses that ignore this mediating pathway may falsely attribute response-time differences to sex/gender, despite no direct causal link ([@fig-technical-variability]c). In principle, one could measure and control for many such variables, but in practice it is difficult to know whether unmeasured factors remain that could undermine the study, making it crucial for researchers to evaluate how seriously potential confounds could threaten their study.
+
+### Standardize hardware and software
+
+Standardizing software and hardware across participants is one of the most effective ways to reduce technical variability. Whenever possible, we recommend researchers restrict participants to those using specific device types (i.e., either computers, tablets, or phones), a feature supported by crowdsourcing platforms such as Prolific, because measures such as simple response times can vary substantially across these device types [@passellCognitiveTestScores2021]. Researchers can also implement code or questionnaires to further restrict participation based on operating system, browser type, input device, and screen refresh rates. However, the benefits of greater experimental control must be weighed against the risk of homogenizing the sample. For example, findings may fail to generalize if a study inadvertently limits their population to tech-savvy participants or those using high-performance devices [@germineDigitalNeuropsychologyChallenges2019].
+
+### Standardize the experiment
+
+Standardizing experimental stimuli is a powerful way to further reduce unwanted variability. For example, psychophysics studies often require precise control over stimulus size in terms of visual angle, which depends on both the physical size of the stimulus and the participant’s viewing distance. Similarly, motor control studies may need to measure the actual movement distance on a participant’s trackpad.
+
+To standardize stimuli across participants, researchers can implement calibration procedures that exploit an element of universality. For example, the ubiquity and standard size of credit cards enables easily mapping virtual units onto real-world measurements, allowing estimation of on-screen stimulus size [@liControllingParticipantsViewing2020; @yungMethodsTestVisual2015] and trackpad movement distance [@coltmanSensitivityErrorVisuomotor2021]. Similarly, the relatively fixed position of the human eye’s blind spot can be used to standardize viewing distances [@liControllingParticipantsViewing2020], and audio calibration procedures can adjust volume to each participant’s setup and hearing ability [@zhaoRobustEfficientOnline2022].
+
+However, standardizing experimental stimuli comes with trade-offs. First, calibration procedures can be tedious and frustrating. Moreover, some may be unwilling or unable to use tools like a credit card for calibration (though clear instructions can help mitigate this; [§ Instruct clearly](#sec-princ-six)). Second, device differences limit how much standardization is possible (for instance, stimuli must be sized to remain visible even on the smallest screens), often forcing researchers to impose additional hardware requirements. Third, even with calibration, variability inevitably persists (even in lab studies), so researchers must weigh the benefits of calibration against participant burden and assess how the remaining variability could affect their research question.
+
+### Record technical factors
+
+For technical variables that cannot be controlled, we recommend recording them and accounting for them analytically, for example by including them as covariates in statistical models (more on this in [§ Collect data comprehensively](#sec-princ-eight)). For example, although screen refresh rate cannot be controlled and directly determines temporal resolution, it can be measured and modeled during analysis to assess whether it mediates the behavior of interest.
+
+### Pilot the experiment on a range of devices
+
+We recommend piloting studies across the full range of devices participants might use. Are stimuli legible on small screens? Are experiments easily completed using a trackpad or mouse? Systematically testing diverse setups in advance helps detect and prevent systematic errors before launching the experiment.
+
+### The principle in action
+
+```{r fig-principle-two}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Technical variability can have different effects across behaviors."
+#| fig-cap: "Technical variability can have different effects across behaviors."
+#| apa-note: "(a) When modeling the effect of sex/gender alone on reaction time, a significant effect is observed where males show faster reaction times than females (left). However, this apparent sex/gender effect disappears once input device is included as a covariate (right). The intercept reflects reaction times for females pooled across devices when device is not controlled (left), and for females specifically using a mouse when device is controlled (right). (b) Other variables, such as movement time, target-click latency, and overall cursor speed (shown) also differ between devices. (c) In contrast, the rate and extent of visuomotor adaptation in response to a 30° rotation does not differ between devices. Data in (a & b) from @warburtonInputDeviceMatters2025, and in (c) from @warburtonVisuomotorMemoryNot2025."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule2.png")
+} else {
+  knitr::include_graphics("../Figures/Rule2.pdf")
+}
+```
+
+We present an example illustrating how input devices can contaminate online studies of individual differences ([@fig-principle-two]a). When considering the effect of sex/gender on reaction times, males appear to be 53 ms quicker to initiate a goal-directed movement than females [@warburtonInputDeviceMatters2025]. However, after including input device (mouse vs trackpad) as a covariate, the sex/gender gap shrinks to 6 ms and is no longer statistically significant. Thus, the apparent sex/gender effect reflects systematic latency differences between devices combined with biased device usage: female participants were more likely to use slower trackpads, whereas male participants more often used faster mice [also see @zhangLargeReachingDatasets2026].
+
+This technological confound extends beyond response times to many behavioral measures. For example, reach velocity profiles differ between devices ([@fig-principle-two]b), posing a concern for mouse-tracking studies that infer latent cognitive processes from these trajectories [@dotanTrackItCrack2019]. However, device effects do not penetrate behaviors universally: in visuomotor adaptation, the rate and extent of adaptation are comparable between trackpad and mouse users ([@fig-principle-two]c; @kimMotorLearningMovement2022; @tsayMovingOutsideLab2021; @tsayLargescaleCitizenScience2024; @warburtonVisuomotorMemoryNot2025). This contrast underscores the need to identify when technological variability is likely to influence outcomes.
+
+## Principle 3: Plan for behavioral variability {#sec-princ-three}
+
+Online studies can be undermined by low participant engagement or deliberate attempts to “cheat”. These issues are often invisible to the experimenter and can render data unusable. However, there is growing consensus that, when properly managed, online data can rival the quality of laboratory data [@dandurandComparingOnlineLab2008; @germineWebGoodLab2012; @hartshorneThousandStudiesPrice2019; @sauterEqualQualityOnline2022; @semmelmannOnlinePsychophysicsReaction2017].
+
+### Understand and deter the sources of ‘bad data’
+
+Low-quality online data can arise for several reasons. First, participants may misunderstand the task and complete it in unintended ways. For example, participants in a visuomotor rotation experiment may fail to recognize that they should re-aim to counteract the imposed perturbation, and as a result, perseverate in reaching directly toward the target. It is therefore crucial that participants adequately understand the task before starting (see [§ Instruct Clearly](#sec-princ-six) for tips on instructions).
+
+Second, participants may cheat – gaining an unfair advantage through dishonest behavior – for example by writing notes during an online memory assessment. It is therefore crucial to take proactive steps to discourage cheating where it is possible, such as removing performance-based monetary incentives, explicitly defining to participants what behaviors count as dishonest, and using task designs that minimize opportunities for misconduct (e.g., requiring rapid responses that leave little time for external aids).
+
+Third, participants may not be fully attentive to the task. Distractions could range from brief lapses that affect a few trials (e.g., replying to a text message) to prolonged disengagement that affects the whole session (e.g., watching a film). It is therefore crucial to proactively deter these behaviors by making the experiment more engaging or embedding attention checks and catch trials that require an atypical response (see [§ Make it engaging](#sec-princ-seven); see @roddMovingExperimentalPsychology2024 for a thorough treatment of the potential sources of bad data).
+
+#### Bots?
+
+Concerns about automated or AI-generated survey responses (‘bots’) have grown alongside advances in artificial intelligence, including large language models [@storozukGotBotsPractical2020; @moss2021bots; @griffinEnsuringSurveyResearch2022; @webbTooGoodBe2022; @goodrichBattlingBotsExperiences2023; @keithTooAnecdotalBe2024; @westwoodPotentialExistentialThreat2025]. At present, bots appear ill-suited to the types of behavioral studies considered here, largely because they struggle to mimic human movement (indeed, idiosyncratic human movement underpin many CAPTCHA tests). Nonetheless, as AI continues to advance, more robust safeguards may be needed to prevent bots from completing behavioral experiments.
+
+### Define and flag bad data
+
+To anticipate how poor data quality may manifest, researchers can complete their own tasks while deliberately mimicking likely failure modes, such as rushing through trials or multitasking, and examine the resulting data patterns. We also recommend recording auxiliary variables that can help detect disengaged behavior. For example, even when response accuracy is the primary dependent measure, recording response time provides an additional indicator of inattentiveness, which may manifest as unusually fast and overly consistent response times.
+
+Clearly defining what constitutes bad data enables targeted tests to identify and remove them; below, we offer several recommendations. First, we recommend flagging bad data via objective criteria – behavioral metrics with predefined thresholds – rather than subjective judgement or visual inspection. For instance, researchers might flag trials as being inattentive where response error exceeds a threshold and exclude participants who surpass a specified proportion of such trials. Second, we recommend defining bad data in terms of absolute thresholds (e.g., where error exceeds a set value) rather than relative ones (e.g., distance from the mean), so that the inattentive participants do not distort the benchmark. Third, when relative criteria are necessary, use robust outlier detection, such as those based on medians and median absolute deviations [@gagneHowRunBehavioural2023; @leysDetectingOutliersNot2013], which are less sensitive to extreme values.
+
+While this can detect many forms of problematic behavior, not all forms can necessarily be detected. For example, while some behavioral signatures of cheating are detectable (e.g., unusually consistent response times, perfect accuracy, or the absence of hallmark behavioral effects), a diligent cheater could intentionally mask these patterns. Therefore, it is crucial to consider how much of a guarantee post-hoc exclusions offer.
+
+### Pre-register exclusion criteria
+
+All exclusion and inclusion criteria should ideally be pre-registered before data collection, that is, publicly specified in advance in a time-stamped record that constrains analytic decisions. Pre-registration constrains researcher degrees of freedom, reducing the risk of spurious findings from questionable research practices (e.g., ‘p-hacking’; @p2021pre). However, it can be difficult to anticipate how bad data may arise, even with extensive pilot testing. As such, researchers may need to deviate from preregistered plans as they collect more data, but any such deviations should be transparently reported [@lakensWhenHowDeviate2024].
+
+### Account for greater variability into a priori power analyses
+
+Online studies often show greater within- and between-subject variability than in-lab samples [@millerComparabilityStabilityReliability2018; @semmelmannOnlinePsychophysicsReaction2017]. While some of this variability reflects welcome sample diversity, it also reduces statistical power to detect effects of interest. To pre-empt this, we recommend conducting conservative power analyses informed by pilot data or meta-analyses to obtain estimates of sample size (see [Box 1](#sec-box-one)).
+
+### The principle in action
+
+We present two experiments that underscore the need to tailor exclusion criteria to the specific demands of each study (@fig-principle-three). In our first experiment, we examined goal-directed motor control by instructing participants to simply move straight through a target, with veridical visual feedback throughout the movement ([@fig-principle-three]a; @warburtonInputDeviceMatters2025). An engaged, instruction-abiding participant would have nearly all their movements fall near the target ([@fig-principle-three]b). In contrast, a disengaged participant might either perseverate in a fixed direction or move in a random manner, with few reaches directed toward the target ([@fig-principle-three]c). Drawing on pilot data, we set a ±60° threshold to flag outlier trials, a conservative criterion chosen to accommodate typical motor variability (≈±10°), and excluded participants who exceeded this threshold on more than 20% of trials.
+
+```{r fig-principle-three}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "The importance of tailoring inclusion and exclusion criteria to different experiments."
+#| fig-cap: "The importance of tailoring inclusion and exclusion criteria to different experiments."
+#| apa-note: "(a) In our first example, participants made goal-directed reaching movements to a visual target with veridical feedback. (b) An attentive participant consistently reached to the target, with example reaches to the 90° (upper) target shown in green in the inset panel (different colors denote reaches to different target locations). We operationalized our exclusion criterion as the percentage of reaches falling within ±60° of the target, a conservative criterion chosen to accommodate typical motor variability (≈±10°). (c) An inattentive participant tends to ignore the cued target location, repeatedly reaching toward a single direction or moving randomly. In this example, only 28% of the participant’s reaches fell within ±60° of the target. Bars denote the number of reaches (out of a total of 480), with red bars denoting outlier trials. Data in panels (b) and (c) from @warburtonInputDeviceMatters2025. (d) In our second example, participants performed a visuomotor adaptation experiment in which performance feedback, indexing the magnitude by which a hidden 60°-rotated cursor missed the target, was provided via a numerical score. (e) When the rotation is imposed, yielding low initial scores, an attentive participant typically exhibits exploration early in learning before converging on a successful strategy late in learning. Red points indicate data that would be classified as outliers under the ±60° criteria, which would remove key data points characterizing the exploratory process. (f) Here, inattentive behavior is characterized by a lack of effort to place the rotated cursor on the target, with participants instead aiming directly at the target throughout the experiment. Data in panels (e) and (f) from @chenIndirectFeedbackHinders2025."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule3.png")
+} else {
+  knitr::include_graphics("../Figures/Rule3.pdf")
+}
+```
+
+However, the same exclusion criteria would not be appropriate in contexts where variable, exploratory behavior is expected. In our second experiment, we examined motor adaptation behavior by instructing participants to counteract to a 60° visuomotor rotation, requiring them to deliberately re-aim away from the target ([@fig-principle-three]d; @chenIndirectFeedbackHinders2025). Performance on this task is characterized by pronounced trial-to-trial fluctuations as participants explore and ultimately discover an effective re-aiming strategy to counteract the perturbation ([@fig-principle-three]e; @townsendAhaMomentPrecedes2025; @dingHypothesisTestingGoverns2025). Excluding data based on a simple absolute threshold (e.g., ±60° of fully compensatory movement) would disproportionately remove data from the early exploratory phase, artificially smoothing learning curves and obscuring the very signatures of adaptation [@tsayFundamentalProcessesSensorimotor2024]. Techniques that account for local variability (e.g., sliding windows) and/or complementary metrics (e.g., unusually fast <100 ms or slow >1000 ms reaction times) may better isolate “bad data” arising from attentional lapses.  An inattentive participant would not attempt to identify an appropriate strategy and would instead persist in aiming directly at the target throughout ([@fig-principle-three]f) - behavior that would have appeared attentive in the first experiment. Thus, appropriately identifying problematic data rests on assumptions about what constitutes signal versus noise, assumptions that are often experiment-specific and require subject-matter expertise.
+
+## Principle 4: Validate your experiment {#sec-princ-four}
+
+When launching an online study, researchers often worry whether the experiment will “work” - that is, whether technical or behavioral constraints hinder implementation or whether lab findings generalize to an online format. To address these concerns, we recommend incorporating brief tests that confirm the online task runs as intended and reproduces known effects (‘validation checks’) before extending the basic effect online.
+
+There are several ways to verify whether an experiment works online. One is to replicate a well-established in-person finding in an online format – either by directly reproducing an existing study or by embedding a validation condition that tests whether a known behavioral signature appears in the online setting successful online replications of the classic in-lab effects, such as the Stroop effect, have paved the way for many online extensions [@barnhoornQRTEngineEasySolution2015; @crumpEvaluatingAmazonsMechanical2013]. Another approach is to adopt a hybrid strategy, collecting both in-lab and online data within the same experiment and directly comparing the effect sizes between settings [@dandurandComparingOnlineLab2008; @germineWebGoodLab2012; @sauterEqualQualityOnline2022; @semmelmannOnlinePsychophysicsReaction2017; @uittenhoveLabTestingWebTestingCognitive2023].
+
+However, pinpointing the exact cause for behavioral differences between in-person and online settings can be challenging. Differences in technical setups (e.g., devices and screen refresh rate) and participant characteristics (e.g., demographics and engagement) can all contribute to discrepancies. For instance, the mixed success in replicating masked priming online, with success in some studies [@angeleDoesOnlineMasked2022; @barnhoornQRTEngineEasySolution2015] but not others [@crumpEvaluatingAmazonsMechanical2013], likely reflects differences in experimental design, software, or hardware, given the effect’s dependence on millisecond-level precision. Failures to replicate online may also reflect limitations of the original in-lab studies, requiring researchers to weigh how much time and effort is warranted to identify the cause.
+
+### The principle in action
+
+We have adopted a ‘replicate first’ approach to evaluate the feasibility of conducting motor control experiments online. Movement data collected remotely using a computer mouse or trackpad reliably reproduce several benchmark effects observed in laboratory settings, including the scaling of movement time and movement speed with target distance (“Fitts Law”) and directional reach biases across the angular workspace [@wangOriginMovementBiases2024; @warburtonKinematicMarkersSkill2023], observations that date back at least 60 years [@begbieAccuracyAimingLinear1959; @brownDiscreteMovementsHorizontal1949; @fitts1954information]. Moreover, participants exhibit canonical visuomotor adaptation profiles online [@coltmanSensitivityErrorVisuomotor2021; @tsayMovingOutsideLab2021; @tsayLargescaleCitizenScience2024], along with classic sensorimotor learning phenomena such as savings, anterograde interference, and spontaneous recovery [@jangSoftwareToolAthome2023]. These validation efforts provide confidence in the viability of online studies to study motor control and adaptation.
+
+```{r fig-principle-four}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Hybrid validation of behavior in online and in-lab settings."
+#| fig-cap: "Hybrid validation of behavior in online and in-lab settings."
+#| apa-note: "(a) To assess one-shot motor learning, trials were organized into ‘triplets’, where a pair of no-feedback trials flanked a trial with perturbed visual feedback (15° visuomotor rotation). There were two triplet conditions: a ‘movement’ triplet, in which participants saw rotated cursor feedback relative to their executed movement, and a ‘no-movement’ triplet, in which feedback was referenced to the planned movement because participants were instructed to rapidly inhibit movement execution. (b) Single-trial learning was evident for both triplet conditions, with comparable learning magnitudes observed across online and laboratory settings. Data from @kimMotorLearningMovement2022."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule4.png")
+} else {
+  knitr::include_graphics("../Figures/Rule4.pdf")
+}
+```
+
+Others have employed a hybrid approach to test more novel effects, such as one-shot motor learning from withheld movements, by directly comparing performance in the lab and online [@kimMotorLearningMovement2022]. In this experiment, movements across trials were organized into ‘triplets’, where a trial with perturbed visual feedback (15° visuomotor rotation) was flanked by two no-feedback trials. Single trial learning was measured as the change in movement angle between the two flanking no-feedback trials ([@fig-principle-four]a). Additionally, two conditions were tested: a ‘movement’ triplet, in which participants saw rotated cursor feedback relative to their executed movement, and a ‘no-movement’ triplet, in which feedback was referenced to the planned movement because participants were instructed to rapidly inhibit movement execution.
+
+Strikingly, robust one-shot motor learning was observed for both triplet types in both online (computer mouse or trackpad) and laboratory (robotic manipulandum) settings. Learning magnitudes were also strikingly similar across settings ([@fig-principle-four]b). This hybrid approach demonstrated that motor adaptation, whether involving physical movement or not, is robust and generalizable across settings.
+
+## Interim summary: What constitutes a “good” online experiment?
+
+A “good” online experiment capitalizes on the unique strengths of crowdsourced research, whether by harnessing large and diverse samples, enabling longitudinal tracking, or accessing populations that are otherwise difficult to recruit. At the same time, a “good” online experiment proactively mitigates risks associated with technological variability, addresses behavioral variability, and establishing convergent validity by reproducing classic laboratory effects. Where the risks of online crowdsourcing cannot be adequately mitigated, the study may be better conducted in-lab, where greater experimenter control can be maintained.
+
+# Running the experiment {#sec-running}
+
+Implementation details often determine whether an online experiment succeeds or fails. Indeed, even the most carefully planned study can be derailed by disengaged participants or impenetrable instructions. To mitigate these risks, we outline practical guidelines broadly applicable to online experiments; specific technical recommendations are summarized in [Box 2](#sec-box-two).
+
+## Principle 5: Recruit participants strategically {#sec-princ-five}
+
+Researchers have many options for collecting data online, each better suited to certain research questions. Below, we outline key considerations for developing a clear recruitment plan tailored to different recruitment goals.
+
+### Choose the most suitable participant pool
+
+#### I want data immediately.
+
+Dedicated participant platforms like Prolific and CloudResearch Connect, where participants are financially compensated, are generally the fastest way to recruit. These services provide a steady stream of participants, allowing data collection from hundreds of individuals within mere hours. By contrast, recruitment through citizen science platforms, such as TestMyBrain.org and LabintheWhile.org, or through social media is slower and less predictable [@reineckeLabintheWildConductingLargeScale2015], with studies often staying open for months and participation arriving in bursts via media coverage or outreach efforts [@hiltonWhyMusicPsychology2024].
+
+#### I want large sample sizes at minimal costs.
+
+If your goal is to collect large samples at minimal cost, citizen science platforms offer a potential solution. Unlike dedicated participant pools, which require financial compensation, citizen science approaches can generate massive datasets with little to no cost. Instead, participants are rewarded with personalized performance feedback accompanied by explanations of the psychological principles under study [@gajosComputerMouseUse2020; @reineckeLabintheWildConductingLargeScale2015; @tsayLargescaleCitizenScience2024]. The key here is to spark curiosity: draw participants in with an engaging ad, keep tasks brief and fun, and provide meaningful feedback that encourages future participation. Notable examples include Samuel Mehr’s Music Lab ([themusiclab.org](themusiclab.org)), which has attracted millions to discover their “musical IQ” [@liuLanguageExperiencePredicts2023], and “Is My Blue Your Blue?” ([ismy.blue](ismy.blue)), where people learn about their ability to perceive colors.
+
+#### I want a diverse sample.
+
+Online samples are typically more diverse and representative than those recruited in traditional laboratory studies [@caseyIntertemporalDifferencesMTurk2017; @douglasDataQualityOnline2023; @paolacciTurkUnderstandingMechanical2014; @peerTurkAlternativePlatforms2017]. Because these platforms have a low barrier to entry – requiring minimal registration or screening, and no need to be co-located with the experimenter – they enable access to wider, more inclusive samples. Prior studies using such approaches have recruited native speakers of 54 languages [@liuLanguageExperiencePredicts2023], participants from 200 countries [@coutrotGlobalDeterminantsNavigation2018], and individuals spanning the human lifespan [@hartshorneWhenDoesCognitive2015].
+
+#### I want specific populations.
+
+When targeting specific populations, most recruitment services allow researchers to choose participants based on demographics such as age, gender, profession, or hobbies. Custom screening can also be achieved by administering questionnaires prior to the experiment to identify individuals meeting desired criteria; this enables access to traditionally hard-to-reach groups, such as those with specific (and sometimes rare) disabilities [@smithConvenientSolutionUsing2015]. Citizen science via social media broadens these opportunities further, for example through targeted advertising to specific communities.
+
+For recruiting patient groups, we recommend recruiting directly through clinicians or partnering with established registries. Registries are usually condition-specific, for example among those with Parkinson’s disease [@kimDiagnosticValidationParticipants2018], Cerebral Palsy [@grossCerebralPalsyResearch2020], or those with stroke [@duriskoFlexibleIntegratedSystem2016]. Notably, an advantage of online neuropsychological studies is the ability to recruit tightly matched control participants; each patient can be treated as the reference case, with demographic filters—age, sex/gender, handedness, education, and even device type on platforms like Prolific—used to recruit a one-to-one matched control participant.
+
+However, easier online access to diverse demographics does not guarantee representativeness. Online samples are often skewed toward individuals with higher cognitive abilities, “super-agers,” those curious about online tasks, and those who are more tech-savvy [@ogletreeHowOlderAdults2021; @spiersExplainingWorldWideVariation2023]. And although they tend to be more diverse than the typical college sample, these cohorts remain skewed and WEIRD [@paolacciTurkUnderstandingMechanical2014]. Researchers must, therefore, remain vigilant about these selection biases when interpreting their findings.
+
+### Recruit from reliable participant pools
+
+When using a dedicated participant pool, we recommend selecting a reputable platform and restricting participation to individuals with high approval ratings. While Amazon’s Mechanical Turk has been widely used for behavioral research [@caslerSeparateEqualComparison2013; @crumpEvaluatingAmazonsMechanical2013], there has been a steady decline in data quality on this platform [@chmielewskiMTurkCrisisShifts2020; @kayWhyYouShouldnt2025; @kennedyShapeSolutionsMTurk2020].In contrast, platforms built for research, such as Prolific and CloudResearch Connect, have consistently delivered higher-quality data [@albertComparingAttentionalDisengagement2023; @douglasDataQualityOnline2023; @peerDataQualityPlatforms2021].
+
+### Recruit at consistent times of day
+
+Participant demographics on recruitment platforms can vary by time of day [@caseyIntertemporalDifferencesMTurk2017; @mossStudyDoesTime2019]; compounding this, behavior can also be influenced by daily circadian rhythms and annual academic cycles [@kellerCognitionVariesCalendar2025; @munnilariDiurnalVariationVariables2024; @schmidtTimeThinkCircadian2007]. To minimize this variability, we recommend recruiting participants at consistent times whenever possible, which is often more practical in online compared to in-lab settings.
+
+### Solicit feedback in small batches
+
+When launching an online experiment, start with a small batch of participants and use their written feedback to iteratively improve clarity and usability. For example, if your target sample size is 50, begin with five participants, run quality checks, and refine the study before scaling up. This staggered approach helps catch implementation errors early on, paving the way for a smoother, more polished experiment.
+
+### The principle in action
+
+```{r fig-principle-five}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Online patient studies leverage the strengths of crowdsourcing."
+#| fig-cap: "Online patient studies leverage the strengths of crowdsourcing."
+#| apa-note: "(a) Patients with cerebellar degeneration, recruited from our patient registry, and one-to-one matched controls, recruited from Prolific, were compared on a visuomotor rotation task. (b) Participants were instructed to move to a visual target and received rotated cursor feedback 800 ms after movement termination (defined as exceeding the target distance), a delayed-feedback manipulation known to isolate the explicit processes underlying motor adaptation. (c) Patients with cerebellar degeneration showed a deficit in discovering a strategy but were able to recall a learned one. Data from @tsayCerebellarDegenerationImpairs2023. "
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule5.png")
+} else {
+  knitr::include_graphics("../Figures/Rule5.pdf")
+}
+```
+
+Decades of laboratory research have shown that patients with cerebellar degeneration are impaired in implicit processes governing motor adaptation [@moreheadCharacteristicsImplicitSensorimotor2017; @tsengSensoryPredictionErrors2007]. That is, patients with cerebellar degeneration exhibit smaller aftereffects than age-matched controls. More recently, the cerebellum has also been implicated in higher-level cognitive functions, such as decision-making, working memory, and numerical cognition, raising the question of whether it also contributes to the explicit re-aiming strategies that underlie motor adaptation (see reviews: @schmahmannCerebellumCognition2019; @tsayCerebellarContributionsAction2025).
+
+To directly test this possibility, we compared patients with cerebellar degeneration to matched controls in an online visuomotor rotation task that isolates explicit re-aiming ([@fig-principle-five]a-b; @tsayCerebellarDegenerationImpairs2023). Online testing removed the logistical barriers of bringing a globally distributed patient cohort into the lab using our patient registry. It also enabled one-to-one matching of patients with controls recruited via Prolific. The results revealed an unexpected dissociation: patients with cerebellar degeneration were impaired at discovering an effective re-aiming strategy early in learnig to counteract the imposed visuomotor rotation but were just as capable as controls at recalling a learned strategy. These online results thus reveal a novel role for the cerebellum in strategy discovery during motor adaptation, consistent with its broader contributions to cognitive function ([@fig-principle-five]c).
+
+## Principle 6: Instruct clearly {#sec-princ-six}
+
+Unlike in-person studies, where researchers can intervene to clarify confusion, online experiments demand exceptionally clear instructions. While this may seem like a limitation, it can be seen as an advantage, ensuring every participant receives identical information, eliminating subtle instructional differences that go unnoticed in lab settings.
+
+### Check technical requirements up front
+
+Clearly communicate all technical requirements upfront. For example, if the experiment requires participants to wear headphones to hear audible stimuli or to make audio recordings of their responses, this should be stated before the study begins. Further, we recommend explicitly verifying that these requirements are met, such as using a headphone check [see @eerolaOnlineDataCollection2021; @milneOnlineHeadphoneScreening2021 for details] or asking participants to first confirm the quality of their recorded responses before proceeding.
+
+### Make calibration failproof
+
+Where calibration procedures are used as part of the experiment setup (e.g., the credit card procedure), user-friendly guidance is essential. For more unintuitive procedures, a video demonstration may be effective. Importantly, we recommend allowing participants to repeat the calibration procedure to ensure that all parameters are correctly calibrated prior to the start of the session.
+
+### Make instructions digestible
+
+We recommend breaking instructions into small, digestible chunks rather than presenting one overwhelming block of text. This segmented approach improves comprehension and reduces cognitive load. Each instructional chunk should remain on the screen for a minimum duration before participants can advance, a pacing strategy shown to disincentivize inattentiveness [@grantImprovingComprehensionConsent2025]. Visual aids, such as images and videos, can further reinforce how instructions map onto different task components. Brief reminders of the instructions throughout the task are valuable, especially for unintuitive designs or when task goals change.
+
+### Instruct what not to do
+
+We also recommend explicitly instructing participants on what they should not do. Addressing common misunderstandings or counter-productive behaviors reinforces clarity and reduces the risk of poor engagement or cheating. These misunderstandings often emerge during piloting, providing opportunities to refine and iterate on the instructions.
+
+### Check instruction comprehension
+
+Comprehension checks are tools used to verify that participants understand task instructions. They generally follow one of two approaches. First, researchers can embed multiple-choice questions after the instructions to probe understanding [e.g., @crumpEvaluatingAmazonsMechanical2013]. This ensures adequate understanding of the task, as participants can only proceed once the questions are answered correctly, with instructions repeated if necessary. Second, researchers can ask participants to summarize the instructions in their own words [e.g., @peerDataQualityPlatforms2021]. This approach helps to reveal whether participants have a big picture understanding of the task, rather than simply repeating isolated task details. These checks can be evaluated during data analysis and used as inclusion criteria, excluding sessions with clear evidence of misunderstanding.
+
+### Pilot a naïve participant
+
+A simple way to assess instruction clarity is to pilot the task with a naïve participant and then debrief them to identify points of confusion. This process ensures that key stages of the experiment, from calibration to comprehension checks, proceeds intuitively.
+
+### The principle in action
+
+Tutorials in video games offer a blueprint for optimizing experimental instructions. Rather than overwhelming players with instructions all at once, these tutorials deliver piecemeal, on-demand guidance seamlessly integrated into gameplay [@caoLearningPlayUnderstanding2022]. We have applied these principles in some of our experiments [e.g., @warburtonKinematicMarkersSkill2023], gradually introducing stimuli (the cursor, target, and the starting position) and procedures, beginning with simple target-clicking practice and then layering on additional constraints such as time limits ([@fig-principle-six]a).
+
+```{r fig-principle-six}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Strategies for providing clear and effective instructions."
+#| fig-cap: "Strategies for providing clear and effective instructions."
+#| apa-note: "(a) Piecemeal instructions were delivered through a video game style tutorial, based on the experiments in @warburtonKinematicMarkersSkill2023. The task elements, like the home position, cursor, and target were introduced sequentially. (b) The clamped feedback task (where the cursor always appears at a fixed angular offset from the target, such as 30° counterclockwise, regardless of the participant’s movement direction) is used to isolate implicit processes underlying motor adaptation. Implicit adaptation is indexed by gradual deviations of the hand away from the target in the direction opposite the cursor offset. (c) To ensure that participants fully understood the task, we instructed participants to move toward several different directions to appreciate the cursor’s angular invariance; we also asked participants to answer a comprehension question before allowing them to proceed (for details on instructions, see: @avrahamInterferenceUnderliesAttenuation2025; @kimMotorLearningMovement2022; @tsayMovingOutsideLab2021). (d) Implicit motor adaptation in response to clamped visual feedback. Data from @wangAdvancedFeedbackEnhances2024."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule6.png")
+} else {
+  knitr::include_graphics("../Figures/Rule6.pdf")
+}
+```
+
+Clear instructions are critical for our motor learning studies, where task constraints can often seem counterintuitive. For example, in the clamped feedback task used to isolate implicit motor adaptation, participants are instructed to reach straight to the target but ignore a rotated visual cursor that appears at a fixed angular offset (e.g., “clamped” at 30° counterclockwise) from the target ([@fig-principle-six]b; @moreheadCharacteristicsImplicitSensorimotor2017). Because participants are instructed not to aim away from the target, any systematic movement deviation opposite the direction of the cursor rotation can be attributed to implicit processes.
+
+To ensure participants fully understand the instructions, we include a familiarization phase in which they practice moving in different directions under the same cursor rotation, demonstrating that the cursor offset remains invariant ([@fig-principle-six]c). We also embed comprehension checks throughout the experiment, asking participants whether they should move straight to the target or aim away from it; they proceed with the task only after correctly identifying that they must always move straight to the target [@avrahamInterferenceUnderliesAttenuation2025; @kimMotorLearningMovement2022; @tsayMovingOutsideLab2021]. Together, these manipulations ensure that observed learning in this task are not confounded by misunderstandings ([@fig-principle-six]d).
+
+## Principle 7: Make it engaging {#sec-princ-seven}
+
+Task engagement isn’t just a bonus – it is often essential for reducing inattentive responses and sustaining participant motivation. In certain populations, such as children, engagement is a prerequisite for participation. Below, we outline recommendations for maximizing engagement and identifying participants who may not be sufficiently engaged.
+
+### Gamify the experiment
+
+Video games are often designed to maximize enjoyment, offering a valuable blueprint for enhancing engagement in experimental tasks [@allenUsingGamesUnderstand2024]. For example, researchers can incorporate a narrative or cover story [@pickavanceProactiveInhibitionGoaldirected2022], use humorous or attention-grabbing stimuli [@chenAgedependentPavlovianBiases2018], or boost motivation through leaderboards [@hamariDoesGamificationWork2014]. These steps may be particularly beneficial for studies with children [@maloneControlMovementGradually2025] or when running citizen science experiments [@longHowGamesCan2023].
+
+### Bonus payments
+
+Offering a performance-based monetary bonus is a common strategy to boost motivation in online experiments. This can take the form of a small bonus that all participants earn incrementally throughout the task, or a larger reward granted to top performers, such as those ranked highest on a leaderboard. These incentives, however, must be weighed against the risk that participants may be incentivized to cheat to increase their monetary pay-off.
+
+### Regular breaks
+
+Brief and regular breaks allow participants to rest or briefly attend to other matters. This reduces the likelihood of unscheduled pauses or inattentiveness during the task, supporting more consistent engagement and concentrating any rest-induced effects to common periods of the experiment. When uninterrupted engagement is required, we recommend informing participants upfront so they can decide whether to participate and attend to needs (e.g., taking a bathroom break) beforehand.
+
+### Progress Bar
+
+As an experiment continues with no end in sight, the prospects of quitting or rushing through with waning attention become more inviting. A simple remedy is to notify participants of their progress through the experiment with a progress bar shown after each trial or during rest breaks.
+
+### Attention checks
+
+Attention checks help identify participants who are not paying attention. Common approaches in surveys include ‘instructional manipulation checks’ (asking for a specific response that may run counter to intuition), ‘bogus items’ (questions with an obvious answer), repeated questions to test response consistency, and correlations among synonym or antonym items [@newmanDataCollectionOnline2021; @thomasValidityMechanicalTurk2017]. We recommend deploying attention checks at multiple stages of the experiment and integrating them cohesively into the task design.
+
+However, attention checks can change how participants behave—for example, by making them respond more cautiously [@hauserAreManipulationChecks2018; @hauserItsTrapInstructional2015]. Moreover, survey-style attention checks may not be effective in your behavioral tasks, and establishing the validity of new types of attention checks can be challenging. We therefore recommend using attention checks sparingly, where they provide a clear benefit.
+
+### Full screen mode
+
+A simple way to reduce distractions is to require participants to complete the experiment in full-screen mode and only allow participants to proceed while it remains active. It is also beneficial to record how often and how long participants exit from full screen mode to identify those who may be particularly distracted.
+
+### Ask about distractions and level of engagement
+
+A brief post-task questionnaire, asking how much effort participants put in and whether they were distracted (with reassurance that payment is unaffected), can offer valuable insight into how they approached the task. Participants are generally honest when reporting their level of engagement and the nature of their distractions [@ansolabehereDistractionsIncidenceConsequences2015; @drodyDesireDistractionUncovering2023]. These self-reports can be incorporated as covariates in analysis or used as criteria for data exclusion.
+
+### The principle in action
+
+Carefully designing a gamified narrative can make an experiment both more engaging and easier to understand. For example, in a recent study investigating proactive movement inhibition, the ability to withhold an action when a stop signal is expected [@pickavanceProactiveInhibitionGoaldirected2022], researchers designed a simple, easy-to-understand game. Participants controlled a fruit bat using their mouse or trackpad and were instructed to intercept a moving “Unidentified Fruity Object” ([@fig-principle-seven]a). In the ‘certain condition’, a nighttime scene signaled that the bat could safely leave the roost to feed; in the ‘uncertain condition’, a dawn scene sometimes shifted abruptly to daylight, requiring participants to abruptly withhold their movement to avoid “sunburning” bat ([@fig-principle-seven]b). Proactive inhibition was quantified as the delay in movement initiation and target arrival in the uncertain condition relative to the certain condition ([@fig-principle-seven]c). Crucially, the story-based framing made an otherwise abstract manipulation intuitive and engaging.
+
+```{r fig-principle-seven}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Gamification makes online experiments more intuitive and engaging."
+#| fig-cap: "Gamification makes online experiments more intuitive and engaging."
+#| apa-note: "(a) Participants used their mouse or trackpad to move a fruit bat from its cave to intercept an ‘Unidentified Fruity Object’ [@pickavanceProactiveInhibitionGoaldirected2022]. (b) The narrative was tightly integrated into the task structure. In the ‘certain condition’, a nighttime scene signaled that the bat could safely leave the roost to feed; in the ‘uncertain condition’, a dawn scene sometimes shifted abruptly to daylight, requiring participants to withhold movement to avoid “sunburning” their bat. (c) Participants showed proactive inhibition under environmental uncertainty, initiating movements and arriving at the target later. The gray line denotes the target’s midline. (d) Tailoring the experiment to the target audience can boost engagement. In a study examining visuomotor adaptation among children [@maloneControlMovementGradually2025], participants guided a ball with their mouse to a “play” button, which then triggered a short Disney animation, serving as a rewarding signal that they had successfully reached the target."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule7.png")
+} else {
+  knitr::include_graphics("../Figures/Rule7.pdf")
+}
+```
+
+Tailoring an experiment to the target demographic can also significantly enhance engagement. For example, researchers adapted the visuomotor rotation task for children and adolescents by having participants guide a ball with a mouse to a “play” button, which triggered a short Disney animation as a reward for successfully reaching the target ([@fig-principle-seven]d; @maloneControlMovementGradually2025). This more motivating, age-appropriate task was completed online by hundreds of participants across the lifespan.
+
+## Principle 8: Collect data comprehensively {#sec-princ-eight}
+
+Detailed documentation of each experimental session is useful for mitigating technical and behavioral variability. Below, we outline implementation tips for recording variables that may aid in ensuring data integrity, diagnosing unexpected patterns, and safeguarding against silent failures in the data pipeline.
+
+### Test a minimal analysis script
+
+Using a minimal analysis script is one of the most effective ways to verify that your experiment is recording data correctly. Run through the experiment yourself, feed the data into the script, and confirm that expected behavioral analyses are produced. Although this step may seem trivial, we have encountered cases where data collection began in earnest only to discover that critical variables were missing, often due to software dependency changes, database upgrades, or data storage limits.
+
+### Collect fixed technological variables
+
+Fixed technological variables, those that remain constant within an experimental session, can be leveraged as covariates or used to pre-screen participants. Broadly, these variables fall into three categories: First, some data can be automatically logged via JavaScript, such as the user’s operating system, web browser, and display resolution [@anwyl-irvineRealisticPrecisionAccuracy2021; @bridgesTimingMegastudyComparing2020]. Second, other details must be self-reported because they are difficult to capture programmatically, such as the type of computer or input device a participant is using. Third, some variables must be measured by the participant. For example, monitor size cannot be reliably inferred automatically and is often unknown to users themselves. In these cases, user-guided measurement methods can be effective – for instance, asking participants to estimate their screen dimensions using a standard credit card as a reference [@liuLanguageExperiencePredicts2023; @yungMethodsTestVisual2015].
+
+### Collect changing technological variables
+
+Some technical variables fluctuate during an experiment. For example, a participant’s display frame rate can vary across the session [@mcconnellMethodologicalConsiderationsBehavioral2024]. Human factors can also drift during an experiment; for example, a blind-spot calibration for viewing distance becomes invalid if a participant shifts their seating position. As such, monitoring these variables and recalibrating frequently are essential for maintaining a controlled experimental setup.
+
+### Seek feedback to improve the experiment
+
+Soliciting participant feedback not only helps participants feel valued in the research process but can also surface issues or insights that improve the experiment. Moreover, asking participants about any strategies they used in the task may reveal unexpected psychological processes and help explain anomalous data patterns. For example, a researcher might struggle to interpret a bimodal pattern in audiovisual psychophysical experiment, only to learn from participant reports that some individuals closed their eyes (an anecdote shared at a conference). Ending with a broad, open-ended question (e.g., “Do you have any additional comments?”) can further surface insights that structured prompts might miss.
+
+### The principle in action
+
+```{r fig-principle-eight}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Measuring technical variability within and across participants."
+#| fig-cap: "Measuring technical variability within and across participants."
+#| apa-note: "(a) Each point represents an individual participant, showing the average of their within-trial frame rate and its variability. Four representative participants are highlighted for further visualization. Vertical dashed lines show standard display frame rates. (b) Frame rates for the four highlighted participants exhibit different temporal profiles throughout the experiment. The lines show the median within-trial frame rate, and the shaded region shows the median ± MAD within-trial frame rate. (c) The histograms of frame durations across the whole experiment are shown for the four participants. The data shown come from three published datasets [@warburtonInputDeviceMatters2025; @warburtonKinematicMarkersSkill2023; @warburtonVisuomotorMemoryNot2025]."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule8.png")
+} else {
+  knitr::include_graphics("../Figures/Rule8.pdf")
+}
+```
+
+Continuously monitoring technical variables, such as a display’s frame rate, can help identify threats to the integrity of online experiments. Depending on the software implementation and the participant’s hardware, tasks may run at 30 frames per second (fps), well below the nominal 60 fps of standard displays. Such reductions can increase the latency of visual feedback on the screen, a factor known to substantially affect visuomotor performance [@hadjiosifTinyVisualLatencies2025; @smithFeedbackRealTimeDelayed1972]. Moreover, the display rate directly determines temporal resolutions, for example in how closely stimuli display times match their intended durations.
+
+In our experiments, we continuously monitored each participant’s frame rate and used it as a criterion for excluding participants [@warburtonInputDeviceMatters2025; @warburtonKinematicMarkersSkill2023; @warburtonVisuomotorMemoryNot2025]. While most participants exhibited stable frame rates at standard values (e.g., 60, 120, or 144 fps) with minimal trial-to-trial variability ([@fig-principle-eight]a), a subset of participants showed atypical frame rate profiles ([@fig-principle-eight]b). Even within individuals, the distribution of frame durations, the intervals between successive frames, can vary considerably ([@fig-principle-eight]c). Where fine-grained movement analyses were required, we excluded participants with sampling rates below 30 fps, ensuring that our online experiments maintain the temporal precision required for the extraction of valid motor behavior measures.
+
+## Principle 9: Respect your participants {#sec-princ-nine}
+
+With no face-to-face interaction, it is easy to forget that real people are completing our online experiments. This disconnect must not breed complacency – providing a positive user experience is essential, and even small design choices can meaningfully enhance both participant experience and data quality [also see: @fowlerFrustrationEnnuiAmazon2023; @kapitanyBestPracticesCrowdsourcing2023].
+
+### Embody the golden rule
+
+Sign up as a participant on a crowdsourcing platform like Prolific, CloudResearch Connect, or Mechanical Turk and try completing a few studies yourself. Even a week or two of casual participation will provide valuable first-hand insight into common frustrations and will help you design a more participant-centered online experiment.
+
+### Be transparent about study demands
+
+While it is often necessary to withhold certain study details, we recommend providing participants with enough information to make an informed decision about their time commitment to the experiment. If a task is likely to be tedious, being upfront about it not only respects participants’ time but can also reduce mid-study dropouts and discourage disengaged participation. Moreover, providing an accurate estimate of experiment duration is both a courtesy on citizen science platforms and a necessity on crowdsourcing platforms, where payment is tied to time. In our experience, median completion times on crowdsourcing websites are typically at least 10% longer than those of well-practiced experimenters. Testing with naïve lab members, friends, or in a small pilot study can help refine these estimates and ensure they reflect the naïve participant’s experience.
+
+### Compensate participants fairly
+
+Participants need to be compensated fairly. On citizen science platforms, this often means non-monetary reward, such as an enjoyable experience, meaningful feedback, or education about the study’s topic. Sometimes gift cards or raffles can also be used as forms of payment. On crowdsourcing platforms, ethical compensation requires providing fair financial rewards commensurate with the time spent—and offering partial compensation even in the event of technical failures. Platforms like Prolific provide clear guidance on recommended pay rates. The harms of exploitative pay in online crowdsourcing have been well documented [e.g., @pittmanAmazonsMechanicalTurk2016], and researchers have a responsibility to respect participants’ time and effort.
+
+Where researchers plan to use exclusion criteria to preclude payment, this must be done in line with a platform’s terms and conditions; moreover, criteria for withholding payment must be clearly stated to participants in advance. Unless bad-faith participation can be clearly distinguished, we recommend researchers err on the side of assuming good-faith participation.
+
+### Debrief participants
+
+Debriefing is often neglected in online studies [@kapitanyBestPracticesCrowdsourcing2023]. We recommend always including at least a brief explanation. Doing so helps participants understand the research goals, feel respected as contributors to science, and may increase their willingness to participate in future studies.
+
+### The principle in action
+
+```{r fig-principle-nine}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Delivering meaningful feedback in online behavioral experiments."
+#| fig-cap: "Delivering meaningful feedback in online behavioral experiments."
+#| apa-note: "In a citizen science motor adaptation experiment [@tsayLargescaleCitizenScience2024], participants received more detailed feedback: a breakdown of their performance into implicit and explicit learning components, comparison with peers, and explanations of how these measures were calculated."
+#| out.width: 100%
+#| apa-twocolumn: true
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Rule9.png")
+} else {
+  knitr::include_graphics("../Figures/Rule9.pdf")
+}
+```
+
+We gave participants performance feedback in our own motor adaptation work conducted using a citizen-science recruitment approach [@tsayLargescaleCitizenScience2024]. After the experiment, participants were debriefed about their performance, including how effectively they counteracted an imposed visuomotor perturbation through implicit and explicit learning processes. Additionally, they saw how their performance compared with that of their peers ([@fig-principle-nine]b) and were given brief explanations of how these outcome measures were calculated, as well as links to how participants could learn more about the topic. This approach offered participants both insight into their own behavior while fostering a deeper appreciation of the science they were helping to advance [@longHowGamesCan2023]. However, feedback must be delivered with care. We recommend avoiding language that risks leaving participants feeling inadequate or pathologized. For this reason, we framed comparisons positively (e.g., “you performed better than ...” rather than “you performed worse than ...”) and emphasized that performance should not be interpreted as a medical diagnosis. Respectful, constructive feedback is likely to strengthen participants’ trust in the research process.
+
+# After the experiment
+
+## Principle 10: Make it discoverable
+
+Laboratory experiments often rely on specialized, proprietary software, often making it impractical for other researchers to run or validate them. In contrast, online experiments are inherently playable and shareable, which enhances replicability and transparency.
+
+### Produce a playable demo
+
+Including a playable demo directly in the research publication allows researchers to experience the task first-hand and understand exactly what the participants saw and were instructed to do. Such demos can be much shorter than the full experiment while still showcasing key stimuli, manipulations, and experimental conditions.
+
+### Provide an implementation guide
+
+Posting the source code of an experiment to a public repository such as the Open Science Framework or GitHub allows others to verify implementation details and increases transparency. Public code also provides concrete examples of how specific experiments can be adapted for online use. Complementing the code with a clear implementation guide further boosts the likelihood that others will adopt and build on your experiment.
+
+### Publish the data
+
+Making experimental data publicly available allows others to evaluate the reproducibility of reported results and repurpose the data for replication, meta-analyses, or computational theorizing. Online pipelines make this straightforward, often exporting to shareable formats like CSV. Some even adopt a ‘born-open’ model, where data are made public immediately upon collection [@deleeuwDataPipeBornopenData2023].
+
+### The principle in action
+
+These open-science principles are embedded in our own workflow. We have made a range of motor learning experimental demos publicly available ([tsaylab.com/play](tsaylab.com/play)); other examples include The Music Lab ([themusiclab.org/](themusiclab.org/)), TestMyBrain.org (<https://testmybrain.org/>), and Pavlovia ([pavlovia.org/](pavlovia.org/)). We have also developed in-depth implementation guides for our online experiment platforms. For example, the Unity Experiment Framework extends the Unity game engine for use in behavioral research [@brookesStudyingHumanBehavior2019], and the OnPoint platform provides a JavaScript framework for conducting online motor experiments [@tsayMovingOutsideLab2021]; other examples include Ouvrai [@cesanekOuvraiOpensAccess2024] and MovementVR [@rossi2025movementvr], frameworks for crowdsourcing remote virtual reality experiments.
+
+To make our data publicly accessible, we created the OpenMotor database ([osf.io/aknqj](osf.io/aknqj)), which houses a range of motor experiment datasets in a standardized format. While still in its early developmental stages, OpenMotor serves as a community resource that will hopefully accelerate progress [@rahnevConfidenceDatabase2020; @yaronConTraStDatabaseAnalysing2022]. Together, making experiments discoverable can transform individual projects into community resources that accelerate progress across the field.
+
+## Integrate learnings
+
+Lessons learned from each experiment can be fed into an ongoing cycle of improvement. Systematically asking the kinds of questions outlined in the preceding section (Were there unexpected noise patterns? Recruitment challenges? Higher-than-expected failures on comprehension/attention checks?) helps to ensure that every experiment strengthens the design, quality, and efficiency of those that follow.
+
+# Conclusions
+
+We have outlined ten principles to optimize the design and delivery of crowdsourced behavioral experiments, enabling researchers to avoid pitfalls and harness the advantages of this approach. Applied in concert, they transform crowdsourcing from a simple convenience into a powerful engine for advancing behavioral science.
+
+# References
+
+::: {#refs}
+:::
+
+\newpage
+\onecolumn
+\setlength{\parindent}{1em}
+
+::: {.callout-note appearance="minimal"}
+## Box 1: Accounting for variability through power analyses {#sec-box-one}
+
+To demonstrate how technical variability can be accounted for when conducting power analyses, we modeled an experiment where we expect to observe a 40ms difference in reaction time between two groups, each with a behavioral standard deviation in reaction time of 80ms across participants (similar to estimates for simple reaction times; @dearyReactionTimeAge2005), equivalent to a Cohen's d of 0.5. However, our ability to measure this true effect is hampered by technical variability between setups.
+
+The simplest way to assess the impact of technical variability is to use a power calculator, such as G\*Power [@faulGPower3Flexible2007], and enter an inflated estimate of each group’s standard deviation. Under parametric assumptions, the sample standard deviation can be calculated as $\sigma_s = \sqrt{\sigma_b + \sigma_t}$, where $\sigma_b$ and $\sigma_t$ are behavioral and technical standard deviations respectively. With this, we could find the sample size required to reach a desired statistical power, here 80%, across different levels of technical variability ([@fig-box-one]a).
+
+An alternative, but more comprehensive approach, would be to observe how power changes as the sample size and potential technical variability are both varied, shown in [@fig-box-one]b (we provide R scripts in the materials). This framework can be extended to incorporate additional factors, for example, jointly modeling power as a function of both the number of participants and the number of trials per participant ([@fig-box-one]c; see @bakerPowerContoursOptimising2021 for more information). The advantage of this approach is that it enables an estimation of the 'wiggle room' around a selected level of power, should factors like participant numbers drop due to exclusions. Together, these power analyses clarify the impact of technical variability and help inform the overall experimental design.
+
+```{r fig-box-one}
+#| fig.align: "center"
+#| echo: false
+#| fig-scap: "Power analysis helps anticipate the effects of technical variability."
+#| fig-cap: "Power analysis helps anticipate the effects of technical variability."
+#| apa-note: "(a) The sample size required to achieve 80% power increases as technical variability rises. (b) Power “contours” illustrate the safety margin available at different levels of technical variability. (c) These contours also indicate how large a sample and how many trials per participant are needed to achieve the desired statistical power."
+#| out.width: 95%
+#| fig-pos: H
+
+output_format <- knitr::pandoc_to()
+
+if(is.null(output_format) || output_format == "docx" || output_format == "html"){ #NULL e.g. when running interactively in IDE
+  knitr::include_graphics("../Figures/Box1.png")
+} else {
+  knitr::include_graphics("../Figures/Box1.pdf")
+}
+```
+:::
+
+::: {.callout-note appearance="minimal"}
+## Box 2: Practical tips for running online experiments {#sec-box-two}
+
+There are generally three stages to the online experiment pipeline: (i) creating the experiment; (ii) hosting the experiment; and (iii) recruiting participants to complete the experiment. We discuss points (i) and (ii) here, with the recruitment of participants dealt with in [§ Recruit participants strategically](#sec-princ-five). We discuss these steps (unless otherwise stated) from the perspective of a researcher wishing to host their experiment as a website that participants visit, with data silently saved to a server. Importantly, the landscape of options changes quickly, so researchers should evaluate the most suitable tools at the time.
+
+### End-to-end solutions
+
+Some providers offer an end-to-end solution, covering experiment creation, hosting, and data storage. Among these, Gorilla has emerged as a particularly popular platform [@anwyl-irvineGorillaOurMidst2020], with Testable and Millisecond Inquisit offering similar services. End-to-end solutions have some downsides, including pricing (the platforms charge individuals or departments a non-trivial sum to use, which departments may choose not to renew), scalability (as the required experiments become more complex, other platforms may become more suitable), and vendor lock-in (converting an experiment from Inquisit’s proprietary markup language is likely to be far more difficult than converting an experiment between Javascript frameworks). In many cases, experimenters choose to navigate these stages themselves.
+
+### Creating the experiment
+
+Some older experiment builders, originally designed for laboratory based experiments, have added support for exporting experiments to the web, including PsychoPy [@peircePsychoPyPsychophysicsSoftware2007] and OpenSesame [@mathotOpenSesameOpensourceGraphical2012]. Most other experiment builders are built directly in Javascript, including jsPsych [@deleeuwJsPsychJavaScriptLibrary2015] and Lab.js [@henningerLabjsFreeOpen2022], and generally offer built-in components to cover many use cases. Others have also created more field-specific frameworks, for example for motor learning studies [@tsayMovingOutsideLab2021].
+
+Researchers may also choose to use a game engine, which are built with interactions, animations, and other game mechanics in mind. Some are built directly in Javascript, including Phaser and Babylon.js, and others can target multiple platforms (e.g., online, computer, phones, VR), including Unity and Godot. Game engines are not built with experiments in mind, so users may find themselves implementing common experimental concepts (though this has been done for Unity: @brookesStudyingHumanBehavior2019).
+
+### Hosting the experiment
+
+Several dedicated options exist to host experiments and store the created data. Researchers could host a server within their institute, with services like JATOS making this easier. Several websites also offer online solutions, including Pavlovia, cognition.run, and MindProbe. These solutions come with varying support for the different experiment frameworks highlighted, so compatibility must be established, and varying price structures, so their fit with the planned experiment scale should be investigated. These options may be most appealing for those who want a solution that ‘just works’, especially if their institute already subscribes to a service and the planned experiments will remain relatively small-scale.
+
+Alternatively, researchers may use more general-purpose platforms, with Amazon Web Services and Google Firebase being two popular options. These platforms can handle any scale of experiment, given they are designed for hosting web apps concurrently accessed by many individuals, and should be the default option for experiments planned to be conducted at scale. This option will generally be more cost-effective than the dedicated solutions, as they usually offer a free tier and trivial charges beyond it (e.g., a study accessed most weekdays by \~200 individuals cost around £8 per month for hosting and data storage on Amazon Web Services). The downside to this approach is that it requires more technical capabilities, like directly interfacing with a database, though examples from existing platforms should make adoption easier [@brookesStudyingHumanBehavior2019; @cesanekOuvraiOpeningAccess2023; @tsayMovingOutsideLab2021].
+:::

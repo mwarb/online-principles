@@ -1,0 +1,25 @@
+# Running the experiment {.unnumbered}
+
+Implementation details often determine whether an online experiment succeeds or fails. Indeed, even the most carefully planned study can be derailed by disengaged participants or impenetrable instructions. To mitigate these risks, we outline practical guidelines broadly applicable to online experiments; specific technical recommendations are summarized in [Box 2](#sec-box-two).
+
+::: {.callout-note appearance="minimal"}
+## Box 2: Practical tips for running online experiments {#sec-box-two}
+
+There are generally three stages to the online experiment pipeline: (i) creating the experiment; (ii) hosting the experiment; and (iii) recruiting participants to complete the experiment. We discuss points (i) and (ii) here, with the recruitment of participants dealt with in [§ Recruit participants strategically](#sec-princ-five). We discuss these steps (unless otherwise stated) from the perspective of a researcher wishing to host their experiment as a website that participants visit, with data silently saved to a server. Importantly, the landscape of options changes quickly, so researchers should evaluate the most suitable tools at the time.
+
+### End-to-end solutions
+
+Some providers offer an end-to-end solution, covering experiment creation, hosting, and data storage. Among these, Gorilla has emerged as a particularly popular platform [@anwyl-irvineGorillaOurMidst2020], with Testable and Millisecond Inquisit offering similar services. End-to-end solutions have some downsides, including pricing (the platforms charge individuals or departments a non-trivial sum to use, which departments may choose not to renew), scalability (as the required experiments become more complex, other platforms may become more suitable), and vendor lock-in (converting an experiment from Inquisit’s proprietary markup language is likely to be far more difficult than converting an experiment between Javascript frameworks). In many cases, experimenters choose to navigate these stages themselves.
+
+### Creating the experiment
+
+Some older experiment builders, originally designed for laboratory based experiments, have added support for exporting experiments to the web, including PsychoPy [@peircePsychoPyPsychophysicsSoftware2007] and OpenSesame [@mathotOpenSesameOpensourceGraphical2012]. Most other experiment builders are built directly in Javascript, including jsPsych [@deleeuwJsPsychJavaScriptLibrary2015] and Lab.js [@henningerLabjsFreeOpen2022], and generally offer built-in components to cover many use cases. Others have also created more field-specific frameworks, for example for motor learning studies [@tsayMovingOutsideLab2021].
+
+Researchers may also choose to use a game engine, which are built with interactions, animations, and other game mechanics in mind. Some are built directly in Javascript, including Phaser and Babylon.js, and others can target multiple platforms (e.g., online, computer, phones, VR), including Unity and Godot. Game engines are not built with experiments in mind, so users may find themselves implementing common experimental concepts (though this has been done for Unity: @brookesStudyingHumanBehavior2019).
+
+### Hosting the experiment
+
+Several dedicated options exist to host experiments and store the created data. Researchers could host a server within their institute, with services like JATOS making this easier. Several websites also offer online solutions, including Pavlovia, cognition.run, and MindProbe. These solutions come with varying support for the different experiment frameworks highlighted, so compatibility must be established, and varying price structures, so their fit with the planned experiment scale should be investigated. These options may be most appealing for those who want a solution that ‘just works’, especially if their institute already subscribes to a service and the planned experiments will remain relatively small-scale.
+
+Alternatively, researchers may use more general-purpose platforms, with Amazon Web Services and Google Firebase being two popular options. These platforms can handle any scale of experiment, given they are designed for hosting web apps concurrently accessed by many individuals, and should be the default option for experiments planned to be conducted at scale. This option will generally be more cost-effective than the dedicated solutions, as they usually offer a free tier and trivial charges beyond it (e.g., a study accessed most weekdays by \~200 individuals cost around £8 per month for hosting and data storage on Amazon Web Services). The downside to this approach is that it requires more technical capabilities, like directly interfacing with a database, though examples from existing platforms should make adoption easier [@brookesStudyingHumanBehavior2019; @cesanekOuvraiOpeningAccess2023; @tsayMovingOutsideLab2021].
+:::
