@@ -6,6 +6,7 @@ book:
   title: How to run online behavioral experiments
   author: Matthew Warburton, Jonathan S. Tsay
   date: "2026"
+  date-format: "YYYY"
   chapters:
     - index.qmd
     - 0_introduction.qmd
@@ -28,10 +29,6 @@ book:
         - 10_make_it_discoverable.qmd
     - 11_closing.qmd
     - references.qmd
-  google-analytics: 
-    tracking-id: "G-S4B0H96CC5"
-    storage: none
-    anonymize-ip: true
   open-graph: true
     
 
