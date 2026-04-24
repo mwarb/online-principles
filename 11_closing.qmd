@@ -6,4 +6,4 @@ We have outlined ten principles to optimize the design and delivery of crowdsour
 
 If you have found this resource helpful for designing and implementing your online experiment, please consider citing it in your research:
 
-`Warburton, M., & Tsay, J. S. (2026). Ten Principles for Crowdsourcing Human Behavior Online. PsyArXiv. https://doi.org/10.31234/osf.io/nhtu2_v1`
+`Warburton, M., Tsay, J.S. How to conduct behavioural experiments online. Nature Human Behaviour (2026). https://doi.org/10.1038/s41562-026-02465-w`
